@@ -25,7 +25,7 @@
 
     <header class="services-hero">
 
-        <!-- SAME NAV -->
+        <!-- NAV -->
         <nav class="nav container">
 
             <div class="nav-sparkle">
@@ -46,11 +46,11 @@
         </nav>
 
 
+        <!-- HERO CONTENT -->
         <div class="container services-hero-grid">
 
 
             <!-- LEFT -->
-
             <div class="services-hero-copy">
 
                 <h1>
@@ -77,8 +77,7 @@
             </div>
 
 
-            <!-- POLAROID / GRAPHIC PLACEHOLDER -->
-
+            <!-- RIGHT / POLAROID PLACEHOLDER -->
             <div class="services-hero-art">
 
                 <div class="services-polaroid-placeholder">
@@ -108,7 +107,6 @@
 
 
             <!-- LEFT -->
-
             <div class="services-list-intro">
 
                 <h2>
@@ -126,16 +124,24 @@
 
 
 
-            <!-- RIGHT -->
-
+            <!-- RIGHT / ACCORDION -->
             <div class="services-accordion">
 
 
-                <div class="service-item">
+                <!-- FULL BRAND IDENTITY -->
+                <details class="service-item" open>
 
-                    <div class="service-item-copy">
+                    <summary>
 
-                        <h3>full brand identity</h3>
+                        <h3>
+                            full brand identity
+                        </h3>
+
+                        <span class="accordion-icon"></span>
+
+                    </summary>
+
+                    <div class="service-details">
 
                         <p>
                             strategy, design, and a complete visual system.
@@ -143,34 +149,50 @@
 
                     </div>
 
-                    <span>−</span>
-
-                </div>
+                </details>
 
 
-                <div class="service-item">
 
-                    <div class="service-item-copy">
+                <!-- PRINT & DIGITAL -->
+                <details class="service-item">
 
-                        <h3>print &amp; digital design</h3>
+                    <summary>
+
+                        <h3>
+                            print &amp; digital design
+                        </h3>
+
+                        <span class="accordion-icon"></span>
+
+                    </summary>
+
+                    <div class="service-details">
 
                         <p>
-                            business cards, brochures, posters,
-                            flyers, packaging, social media graphics.
+                            business cards, brochures, posters, flyers,
+                            packaging, social media graphics.
                         </p>
 
                     </div>
 
-                    <span>−</span>
-
-                </div>
+                </details>
 
 
-                <div class="service-item">
 
-                    <div class="service-item-copy">
+                <!-- MARKETING COLLATERAL -->
+                <details class="service-item">
 
-                        <h3>marketing collateral</h3>
+                    <summary>
+
+                        <h3>
+                            marketing collateral
+                        </h3>
+
+                        <span class="accordion-icon"></span>
+
+                    </summary>
+
+                    <div class="service-details">
 
                         <p>
                             email templates, presentation decks,
@@ -179,51 +201,76 @@
 
                     </div>
 
-                    <span>−</span>
-
-                </div>
+                </details>
 
 
-                <div class="service-item">
 
-                    <div class="service-item-copy">
+                <!-- WEB / UI UX -->
+                <details class="service-item">
 
-                        <h3>web &amp; ui/ux design</h3>
+                    <summary>
+
+                        <h3>
+                            web &amp; ui/ux design
+                        </h3>
+
+                        <span class="accordion-icon"></span>
+
+                    </summary>
+
+                    <div class="service-details">
 
                         <p>
                             website design, app interfaces,
-                            digital ads.
+                            and digital ads.
                         </p>
 
                     </div>
 
-                    <span>−</span>
-
-                </div>
+                </details>
 
 
-                <div class="service-item">
 
-                    <div class="service-item-copy">
+                <!-- PHOTOGRAPHY -->
+                <details class="service-item">
 
-                        <h3>photography</h3>
+                    <summary>
+
+                        <h3>
+                            photography
+                        </h3>
+
+                        <span class="accordion-icon"></span>
+
+                    </summary>
+
+                    <div class="service-details">
 
                         <p>
-                            lifestyle, product, and promotional shoots.
+                            lifestyle, product, automotive,
+                            and promotional shoots.
                         </p>
 
                     </div>
 
-                    <span>−</span>
-
-                </div>
+                </details>
 
 
-                <div class="service-item">
 
-                    <div class="service-item-copy">
+                <!-- CUSTOM CREATIVE -->
+                <details class="service-item">
 
-                        <h3>custom creative projects</h3>
+                    <summary>
+
+                        <h3>
+                            custom creative projects
+                        </h3>
+
+                        <span class="accordion-icon"></span>
+
+                    </summary>
+
+                    <div class="service-details">
 
                         <p>
                             any design needs tailored to your
@@ -232,9 +279,7 @@
 
                     </div>
 
-                    <span>−</span>
-
-                </div>
+                </details>
 
 
             </div>
@@ -255,7 +300,6 @@
 
 
             <!-- LEFT -->
-
             <div class="brand-more-copy">
 
                 <h2>
@@ -278,11 +322,11 @@
 
 
 
-            <!-- RIGHT / COMPARISON PLACEHOLDERS -->
-
+            <!-- RIGHT / COMPARISON GRAPHICS -->
             <div class="brand-comparison">
 
 
+                <!-- BEFORE -->
                 <div class="comparison-card">
 
                     <div class="comparison-image-placeholder">
@@ -301,6 +345,8 @@
                 </div>
 
 
+
+                <!-- AFTER -->
                 <div class="comparison-card">
 
                     <div class="comparison-image-placeholder">
@@ -360,14 +406,15 @@
 
 
             <!-- LEFT -->
-
             <div class="footer-brand">
 
                 <a href="index.html">
+
                     <img
                         src="images/logo-white.svg"
                         alt="BriRogue Design"
                     >
+
                 </a>
 
                 <p>
@@ -383,24 +430,49 @@
 
 
             <!-- CENTER -->
-
             <div class="footer-center">
 
                 <div class="footer-nav">
 
                     <a href="work.html">work</a>
-                    <a href="about.html">about</a>
-                    <a href="services.html">services</a>
-                    <a href="contact.html">contact</a>
+
+                    <a href="about.html">
+                        about
+                    </a>
+
+                    <a href="services.html">
+                        services
+                    </a>
+
+                    <a href="contact.html">
+                        contact
+                    </a>
 
                 </div>
 
 
                 <div class="footer-socials">
 
-                    <a href="#" aria-label="Instagram">ig</a>
-                    <a href="#" aria-label="Pinterest">p</a>
-                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                    >
+                        ig
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Pinterest"
+                    >
+                        p
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="LinkedIn"
+                    >
+                        in
+                    </a>
 
                     <a
                         href="mailto:briroguedesign@gmail.com"
@@ -416,7 +488,6 @@
 
 
             <!-- RIGHT -->
-
             <div class="footer-message">
 
                 <div class="footer-badge">
@@ -447,4 +518,5 @@
 
 
 </body>
+
 </html>
