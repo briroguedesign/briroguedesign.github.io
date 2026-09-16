@@ -390,13 +390,6 @@ p {
     padding-bottom: 100px;
 }
 
-.values h2 {
-    margin-bottom: 65px;
-
-    font-size: clamp(4.5rem, 7vw, 7rem);
-    line-height: 0.85;
-}
-
 .values-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -744,12 +737,6 @@ footer p {
     .values {
         padding-top: 55px;
         padding-bottom: 65px;
-    }
-
-    .values h2 {
-        margin-bottom: 45px;
-
-        font-size: clamp(3.5rem, 16vw, 4.8rem);
     }
 
     .values-grid {
