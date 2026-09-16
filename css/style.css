@@ -462,9 +462,10 @@ p {
 .cta-sparkle {
     display: block;
 
-    margin-bottom: 15px;
+    width: 28px;
+    height: auto;
 
-    font-size: 1.8rem;
+    margin: 0 auto 18px;
 }
 
 .cta h2 {
@@ -781,8 +782,11 @@ footer p {
     }
 
     .cta-sparkle {
-        font-size: 1.3rem;
-    }
+    width: 20px;
+    height: auto;
+
+    margin: 0 auto 12px;
+}
 
     .cta h2 {
         font-size: clamp(3.2rem, 15vw, 4.4rem);
