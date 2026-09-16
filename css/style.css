@@ -507,6 +507,24 @@ footer p {
     font-size: 0.75rem;
 }
 
+/* ==================================================
+   CUSTOM CURSOR
+================================================== */
+
+@media (pointer: fine) {
+
+    body {
+        cursor: url("../images/cursor.svg") 2 2, auto;
+    }
+
+    a,
+    button,
+    .button,
+    .project-card {
+        cursor: url("../images/cursor.svg") 2 2, pointer;
+    }
+
+}
 
 /* ==================================================
    TABLET
