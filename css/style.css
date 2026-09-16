@@ -2317,3 +2317,692 @@ footer p {
     }
 
 }
+
+/* ==================================================
+   SERVICES PAGE
+================================================== */
+
+
+/* ------------------------------
+   SERVICES HERO
+------------------------------ */
+
+.services-hero {
+    background: var(--blue);
+    color: var(--off-white);
+    min-height: 650px;
+}
+
+.services-hero-grid {
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 80px;
+    align-items: center;
+
+    padding-top: 55px;
+    padding-bottom: 80px;
+}
+
+.services-hero-copy h1 {
+    font-size: clamp(5.5rem, 8vw, 9rem);
+    line-height: .72;
+    letter-spacing: -.06em;
+
+    margin-bottom: 45px;
+}
+
+.services-hero-copy p {
+    width: 600px;
+    max-width: 100%;
+
+    margin-top: 20px;
+
+    font-size: 1rem;
+    line-height: 1.15;
+}
+
+.services-hero-copy .button {
+    margin-top: 40px;
+}
+
+
+/* HERO POLAROID */
+
+.services-hero-art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 400px;
+}
+
+.services-polaroid-placeholder {
+    width: 270px;
+
+    padding: 14px 14px 55px;
+
+    background: var(--off-white);
+
+    transform: rotate(11deg);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .08);
+}
+
+.services-polaroid-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    background: var(--light-periwinkle);
+    color: var(--blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: .8rem;
+}
+
+
+/* ==================================================
+   HOW WE CAN WORK TOGETHER
+================================================== */
+
+.services-list-section {
+    background: var(--off-white);
+    color: var(--blue);
+
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.services-list-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 100px;
+
+    align-items: start;
+}
+
+
+/* LEFT */
+
+.services-list-intro h2 {
+    font-size: clamp(5rem, 7vw, 7.5rem);
+    line-height: .72;
+}
+
+.services-list-intro p {
+    width: 370px;
+    max-width: 100%;
+
+    margin-top: 45px;
+
+    font-size: 1rem;
+    line-height: 1.15;
+}
+
+
+/* ==================================================
+   SERVICES ACCORDION
+================================================== */
+
+.services-accordion {
+    width: 100%;
+}
+
+.service-item {
+    border-bottom: 1px solid var(--blue);
+}
+
+
+/* REMOVE DEFAULT DETAILS ARROW */
+
+.service-item summary {
+    list-style: none;
+}
+
+.service-item summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* CLICKABLE TITLE ROW */
+
+.service-item summary {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.service-item summary h3 {
+    font-size: 1.35rem;
+    line-height: 1;
+
+    letter-spacing: -.035em;
+}
+
+
+/* PLUS / MINUS */
+
+.accordion-icon {
+    position: relative;
+
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+}
+
+.accordion-icon::before,
+.accordion-icon::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 14px;
+    height: 1.5px;
+
+    background: var(--blue);
+
+    transform: translate(-50%, -50%);
+
+    transition: transform .2s ease;
+}
+
+
+/* VERTICAL LINE = PLUS */
+
+.accordion-icon::after {
+    transform:
+        translate(-50%, -50%)
+        rotate(90deg);
+}
+
+
+/* WHEN OPEN, HIDE VERTICAL LINE */
+
+.service-item[open] .accordion-icon::after {
+    transform:
+        translate(-50%, -50%)
+        rotate(0deg);
+}
+
+
+/* DESCRIPTION */
+
+.service-details {
+    padding:
+        0
+        50px
+        22px
+        0;
+}
+
+.service-details p {
+    width: 430px;
+    max-width: 100%;
+
+    font-size: .9rem;
+    line-height: 1.2;
+}
+
+
+/* subtle hover */
+
+.service-item summary h3 {
+    transition: opacity .2s ease;
+}
+
+.service-item summary:hover h3 {
+    opacity: .65;
+}
+
+
+/* ==================================================
+   YOUR BRAND DESERVES MORE
+================================================== */
+
+.brand-more {
+    background: var(--off-white);
+    color: var(--blue);
+
+    padding-top: 95px;
+    padding-bottom: 95px;
+
+    border-top: 1px solid rgba(0, 25, 255, .08);
+}
+
+.brand-more-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* LEFT */
+
+.brand-more-copy h2 {
+    font-size: clamp(5rem, 7vw, 7.5rem);
+    line-height: .72;
+}
+
+.brand-more-copy p {
+    width: 360px;
+    max-width: 100%;
+
+    margin-top: 35px;
+
+    font-size: 1rem;
+    line-height: 1.15;
+}
+
+.brand-more-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 175px;
+    height: 42px;
+
+    margin-top: 40px;
+    padding: 0 22px;
+
+    background: var(--blue);
+    color: var(--off-white);
+
+    border-radius: 100px;
+
+    font-size: .75rem;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+.brand-more-button:hover {
+    transform: translateY(-3px);
+    background: var(--dark-blue);
+}
+
+
+/* ------------------------------
+   COMPARISON CARDS
+------------------------------ */
+
+.brand-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.comparison-card {
+    min-height: 400px;
+
+    padding: 18px;
+
+    background: var(--light-periwinkle);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+}
+
+.comparison-image-placeholder {
+    width: 100%;
+    aspect-ratio: 1.2 / 1;
+
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--off-white);
+
+    font-size: .7rem;
+}
+
+.comparison-card h3 {
+    font-size: 1.15rem;
+    line-height: .9;
+}
+
+.comparison-copy-placeholder {
+    margin-top: 18px;
+
+    font-size: .7rem;
+    line-height: 1.2;
+}
+
+
+/* ==================================================
+   SERVICES CTA
+================================================== */
+
+.services-cta {
+    position: relative;
+
+    background: var(--blue);
+    color: var(--off-white);
+
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+    overflow: hidden;
+}
+
+.services-cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.services-cta h2 {
+    font-size: clamp(4rem, 6vw, 6rem);
+    line-height: .75;
+}
+
+
+/* ==================================================
+   SERVICES PAGE — TABLET
+================================================== */
+
+@media (max-width: 900px) and (min-width: 651px) {
+
+    .services-hero-grid {
+        gap: 40px;
+    }
+
+    .services-hero-copy h1 {
+        font-size: 6rem;
+    }
+
+    .services-polaroid-placeholder {
+        width: 220px;
+    }
+
+
+    .services-list-grid {
+        gap: 55px;
+    }
+
+    .services-list-intro h2 {
+        font-size: 5rem;
+    }
+
+
+    .brand-more-grid {
+        gap: 45px;
+    }
+
+    .brand-more-copy h2 {
+        font-size: 5rem;
+    }
+
+}
+
+
+/* ==================================================
+   SERVICES PAGE — MOBILE
+================================================== */
+
+@media (max-width: 650px) {
+
+
+    /* --------------------------
+       HERO
+    -------------------------- */
+
+    .services-hero {
+        min-height: auto;
+    }
+
+    .services-hero-grid {
+        display: grid;
+        grid-template-columns: 1fr .55fr;
+
+        gap: 15px;
+
+        align-items: center;
+
+        padding-top: 85px;
+        padding-bottom: 50px;
+    }
+
+    .services-hero-copy h1 {
+        font-size: clamp(4.2rem, 17vw, 5.5rem);
+        line-height: .72;
+
+        margin-bottom: 35px;
+    }
+
+    .services-hero-copy p {
+        width: 100%;
+
+        margin-top: 17px;
+
+        font-size: .82rem;
+        line-height: 1.15;
+    }
+
+    .services-hero-copy .button {
+        min-width: 145px;
+        height: 38px;
+
+        margin-top: 28px;
+
+        padding: 0 16px;
+
+        font-size: .65rem;
+    }
+
+
+    /* HERO POLAROID */
+
+    .services-hero-art {
+        min-height: 250px;
+
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    .services-polaroid-placeholder {
+        width: 135px;
+
+        padding: 7px 7px 28px;
+
+        transform: rotate(11deg);
+    }
+
+    .services-polaroid-image {
+        font-size: .6rem;
+    }
+
+
+    /* --------------------------
+       SERVICES LIST
+    -------------------------- */
+
+    .services-list-section {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .services-list-grid {
+        display: grid;
+        grid-template-columns: .9fr 1.1fr;
+
+        gap: 25px;
+    }
+
+    .services-list-intro h2 {
+        font-size: clamp(3.6rem, 14vw, 4.7rem);
+        line-height: .72;
+    }
+
+    .services-list-intro p {
+        width: 100%;
+
+        margin-top: 35px;
+
+        font-size: .75rem;
+        line-height: 1.15;
+    }
+
+
+    /* ACCORDION */
+
+    .service-item summary {
+        min-height: 55px;
+
+        gap: 15px;
+    }
+
+    .service-item summary h3 {
+        font-size: .9rem;
+        line-height: .95;
+    }
+
+    .accordion-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .accordion-icon::before,
+    .accordion-icon::after {
+        width: 10px;
+        height: 1px;
+    }
+
+    .service-details {
+        padding:
+            0
+            25px
+            15px
+            0;
+    }
+
+    .service-details p {
+        width: 100%;
+
+        font-size: .65rem;
+        line-height: 1.15;
+    }
+
+
+    /* --------------------------
+       BRAND DESERVES MORE
+    -------------------------- */
+
+    .brand-more {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .brand-more-grid {
+        display: grid;
+        grid-template-columns: .85fr 1.15fr;
+
+        gap: 20px;
+
+        align-items: center;
+    }
+
+    .brand-more-copy h2 {
+        font-size: clamp(3.5rem, 14vw, 4.6rem);
+        line-height: .72;
+    }
+
+    .brand-more-copy p {
+        width: 100%;
+
+        margin-top: 25px;
+
+        font-size: .72rem;
+        line-height: 1.15;
+    }
+
+    .brand-more-button {
+        min-width: 130px;
+        height: 36px;
+
+        margin-top: 28px;
+
+        padding: 0 14px;
+
+        font-size: .6rem;
+    }
+
+
+    /* COMPARISON */
+
+    .brand-comparison {
+        gap: 8px;
+    }
+
+    .comparison-card {
+        min-height: 250px;
+
+        padding: 8px;
+
+        border-radius: 10px;
+    }
+
+    .comparison-image-placeholder {
+        margin-bottom: 10px;
+    }
+
+    .comparison-card h3 {
+        font-size: .7rem;
+    }
+
+    .comparison-copy-placeholder {
+        margin-top: 10px;
+
+        font-size: .5rem;
+    }
+
+
+    /* --------------------------
+       CTA
+    -------------------------- */
+
+    .services-cta {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .services-cta-content {
+        gap: 20px;
+    }
+
+    .services-cta h2 {
+        font-size: clamp(3rem, 12vw, 4rem);
+        line-height: .75;
+    }
+
+    .services-cta .button {
+        min-width: 125px;
+        height: 36px;
+
+        padding: 0 14px;
+
+        font-size: .6rem;
+    }
+
+}
