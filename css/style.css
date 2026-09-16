@@ -818,11 +818,10 @@ footer p {
     }
 }
 
-/* CUSTOM CURSOR */
+/* ==================================================
+   CUSTOM CURSOR
+================================================== */
 
-html,
-body,
-a,
-button {
-    cursor: url("../images/cursor.svg") 0 0, auto !important;
+* {
+    cursor: url("../images/cursor.png") 0 0, auto !important;
 }
