@@ -835,3 +835,12 @@ footer p {
         font-size: 0.7rem;
     }
 }
+
+/* CUSTOM CURSOR */
+
+html,
+body,
+a,
+button {
+    cursor: url("../images/cursor.svg") 0 0, auto !important;
+}
