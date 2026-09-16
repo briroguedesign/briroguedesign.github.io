@@ -1,6 +1,26 @@
 /* =========================
    BRIROGUE DESIGN
 ========================= */
+@font-face {
+    font-family: "Aileron";
+    src: url("../fonts/Aileron-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Aileron";
+    src: url("../fonts/Aileron-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Aileron";
+    src: url("../fonts/Aileron-Black.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+}
 
 :root {
     --blue: #0019ff;
@@ -28,7 +48,8 @@ html {
 body {
     background: var(--off-white);
     color: var(--blue);
-    font-family: Arial, sans-serif;
+    font-family: "Aileron", Arial, sans-serif;
+    font-weight: 400;
 }
 
 a {
@@ -52,19 +73,22 @@ a {
 h1,
 h2,
 h3 {
+    font-family: "Aileron", Arial, sans-serif;
     font-weight: 900;
     letter-spacing: -0.055em;
 }
 
-h1,
-h2 {
-    line-height: .88;
-}
-
 p {
-    line-height: 1.05;
+    font-family: "Aileron", Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
+.nav-links,
+.button,
+.project-info {
+    font-weight: 400;
+}
 
 /* =========================
    BUTTONS
