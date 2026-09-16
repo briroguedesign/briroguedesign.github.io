@@ -129,11 +129,13 @@ p {
 
 .logo {
     justify-self: center;
+    display: block;
+}
 
-    color: var(--off-white);
-
-    font-size: .9rem;
-    font-weight: 900;
+.logo img {
+    display: block;
+    width: 110px;
+    height: auto;
 }
 
 .nav-links {
@@ -483,9 +485,9 @@ footer p {
         font-size: .7rem;
     }
 
-    .logo {
-        font-size: .5rem;
-    }
+    .logo img {
+    width: 75px;
+}
 
     .nav-links {
         gap: 14px;
