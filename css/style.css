@@ -750,3 +750,37 @@ footer p {
     }
 
 }
+
+/* =========================
+   FINAL HERO OVERRIDES
+========================= */
+
+@media (min-width: 651px) {
+
+    .logo img {
+        width: 175px;
+        height: auto;
+    }
+
+    .nav-links {
+        font-size: 0.9rem;
+        gap: 32px;
+    }
+
+    .hero h1 {
+        font-size: clamp(7rem, 9vw, 10rem);
+        line-height: 0.68;
+    }
+
+    .hero-description {
+        width: 470px;
+        font-size: 1.15rem;
+        line-height: 1.25;
+        margin-top: 35px;
+    }
+
+    .hero .button {
+        font-size: 0.85rem;
+    }
+
+}
