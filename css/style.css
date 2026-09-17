@@ -916,32 +916,48 @@ p {
     }
 
 
-    /* -------------------------
-       MOBILE FOOTER
-    ------------------------- */
+    /* ==================================================
+   MOBILE FOOTER
+================================================== */
 
-    footer {
-        padding-top: 55px;
-        padding-bottom: 30px;
-    }
+.site-footer {
+    padding: 40px 0;
+}
 
-    .footer-content h2 {
-        font-size: 3rem;
-    }
+.site-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
 
-    .social-links {
-        margin: 35px 0;
+.footer-logo img {
+    width: 145px;
+}
 
-        flex-direction: column;
+.footer-tagline {
+    margin-top: 18px;
+    font-size: .85rem;
+}
 
-        gap: 15px;
+.footer-copyright {
+    margin-top: 22px;
+    font-size: .7rem;
+}
 
-        font-size: 0.85rem;
-    }
+.footer-socials {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px 22px;
 
-    footer p {
-        font-size: 0.7rem;
-    }
+    font-size: .75rem;
+}
+
+.footer-nav {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+
+    font-size: .78rem;
+}
 }
 
 /* ==================================================
