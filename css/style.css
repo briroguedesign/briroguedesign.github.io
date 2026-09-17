@@ -301,7 +301,7 @@ p {
 
     color: var(--blue);
 
-    -webkit-text-stroke: 6px var(--off-white);
+    -webkit-text-stroke: 9px var(--off-white);
     paint-order: stroke fill;
 
     line-height: 0.72;
