@@ -313,14 +313,14 @@ p {
 
 .why-title span:nth-child(2) {
     z-index: 2;
-    transform: translateY(-20px);
+    transform: translateY(-15px);
 }
 
 .why-copy p {
     width: 650px;
     max-width: 100%;
 
-    margin-top: 22px;
+    margin-top: 20px;
 
     font-size: 1.05rem;
 }
