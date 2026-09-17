@@ -509,7 +509,8 @@ p {
 }
 
 .cta h2 {
-    max-width: 1200px;
+    width: 100%;
+    max-width: none;
     margin: 0 auto;
 
     font-size: clamp(4rem, 6.5vw, 7rem);
@@ -519,8 +520,14 @@ p {
     display: block;
     position: relative;
 
-    color: var(--off-white);
+    width: max-content;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
 
+    white-space: nowrap;
+
+    color: var(--off-white);
     -webkit-text-stroke: 9px var(--blue);
     paint-order: stroke fill;
 
@@ -533,10 +540,9 @@ p {
 
 .cta-title span:nth-child(2) {
     z-index: 2;
-
-    /* physically pull second line over first */
-    transform: translateY(-45px);
+    transform: translateY(-35px);
 }
+
 .cta .button {
     margin-top: 40px;
 }
