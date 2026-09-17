@@ -509,7 +509,10 @@ p {
 }
 
 .cta h2 {
-    font-size: clamp(4.5rem, 7vw, 7rem);
+    max-width: 1200px;
+    margin: 0 auto;
+
+    font-size: clamp(4rem, 6.5vw, 7rem);
 }
 
 .cta-title span {
@@ -521,7 +524,7 @@ p {
     -webkit-text-stroke: 9px var(--blue);
     paint-order: stroke fill;
 
-    line-height: 0.72;
+    line-height: 0.78;
 }
 
 .cta-title span:nth-child(1) {
@@ -530,7 +533,7 @@ p {
 
 .cta-title span:nth-child(2) {
     z-index: 2;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
 }
 
 .cta .button {
