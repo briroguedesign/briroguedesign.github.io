@@ -228,7 +228,7 @@ p {
 
     color: var(--off-white);
 
-    -webkit-text-stroke: 8px var(--blue);
+    -webkit-text-stroke: 9px var(--blue);
     paint-order: stroke fill;
 
     line-height: 0.72;
@@ -253,7 +253,7 @@ p {
     width: 470px;
     max-width: 100%;
 
-    margin-top: 38px;
+    margin-top: -15px;
 
     font-size: 1.15rem;
     line-height: 1.25;
