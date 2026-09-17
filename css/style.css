@@ -3348,17 +3348,20 @@ footer p {
    TOPO PATTERN BACKGROUNDS
 ================================================== */
 
-/* sections that use the BriRogue topo pattern */
+/* all topo sections */
 .cta,
 .about-stats,
 .about-cta,
 .services-cta {
     position: relative;
     overflow: hidden;
+
+    background-color: var(--blue);
+    color: var(--off-white);
 }
 
 
-/* pattern layer */
+/* one continuous topo pattern */
 .cta::before,
 .about-stats::before,
 .about-cta::before,
@@ -3369,9 +3372,10 @@ footer p {
     inset: 0;
 
     background-image: url("../images/topo-pattern.svg");
-    background-repeat: repeat;
+
+    background-repeat: no-repeat;
     background-position: center;
-    background-size: 700px auto;
+    background-size: cover;
 
     opacity: .35;
 
@@ -3379,7 +3383,7 @@ footer p {
 }
 
 
-/* keep all actual content above the pattern */
+/* keep content above pattern */
 .cta > *,
 .about-stats > *,
 .about-cta > *,
