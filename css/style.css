@@ -292,7 +292,28 @@ p {
     margin-bottom: 45px;
 
     font-size: clamp(4.5rem, 7vw, 7rem);
-    line-height: 0.85;
+    
+}
+
+.why-title span {
+    display: block;
+    position: relative;
+
+    color: var(--blue);
+
+    -webkit-text-stroke: 6px var(--off-white);
+    paint-order: stroke fill;
+
+    line-height: 0.72;
+}
+
+.why-title span:nth-child(1) {
+    z-index: 1;
+}
+
+.why-title span:nth-child(2) {
+    z-index: 2;
+    transform: translateY(-35px);
 }
 
 .why-copy p {
