@@ -29,6 +29,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Bryndan Write";
+    src: url("../fonts/BryndanWriteBook-nGPM.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
 
 /* ==================================================
    BRAND VARIABLES
@@ -1044,6 +1050,7 @@ p {
 }
 
 .about-handwriting {
+    font-family: "Bryndan Write", sans-serif;
     position: absolute;
     right: 0;
     bottom: 15px;
@@ -1966,6 +1973,7 @@ p {
 }
 
 .form-note {
+    font-family: "Bryndan Write", sans-serif;
     min-width: 110px;
 
     font-size: 1.15rem;
