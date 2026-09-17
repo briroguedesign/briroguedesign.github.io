@@ -510,7 +510,27 @@ p {
 
 .cta h2 {
     font-size: clamp(4.5rem, 7vw, 7rem);
-    line-height: 0.82;
+}
+
+.cta-title span {
+    display: block;
+    position: relative;
+
+    color: var(--off-white);
+
+    -webkit-text-stroke: 9px var(--blue);
+    paint-order: stroke fill;
+
+    line-height: 0.72;
+}
+
+.cta-title span:nth-child(1) {
+    z-index: 1;
+}
+
+.cta-title span:nth-child(2) {
+    z-index: 2;
+    transform: translateY(-20px);
 }
 
 .cta .button {
