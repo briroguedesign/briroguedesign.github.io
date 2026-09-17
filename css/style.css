@@ -313,7 +313,7 @@ p {
 
 .why-title span:nth-child(2) {
     z-index: 2;
-    transform: translateY(-35px);
+    transform: translateY(-20px);
 }
 
 .why-copy p {
