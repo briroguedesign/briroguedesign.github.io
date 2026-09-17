@@ -1340,7 +1340,7 @@ p {
 
 .beyond-title span:nth-child(2) {
     z-index: 2;
-    transform: translateY(-15px);
+    transform: translateY(-9px);
 }
 
 .beyond-copy p {
@@ -1470,7 +1470,7 @@ p {
 
 .about-cta-title span:nth-child(2) {
     z-index: 2;
-    transform: translateY(-15px);
+    transform: translateY(-9px);
 }
 
 
