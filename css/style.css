@@ -579,14 +579,14 @@ p {
 }
 
 .footer-tagline {
-    margin-top: 16px;
+    margin-top: 8px;
 
     font-size: .9rem;
     line-height: 1.2;
 }
 
 .footer-copyright {
-    margin-top: 22px;
+    margin-top: 10px;
 
     font-size: .75rem;
 }
