@@ -3385,11 +3385,10 @@ p {
 
     background-image: url("../images/topo-pattern-half.svg");
     background-repeat: no-repeat;
-    background-position: center right;
-    background-size: 100% 100%;
+    background-position: right center;
+    background-size: auto 100%;
 
     pointer-events: none;
-
     z-index: 0;
 }
 
