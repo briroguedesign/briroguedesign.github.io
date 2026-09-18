@@ -29,9 +29,9 @@
 
         <nav class="nav container">
 
-            <div class="nav-sparkle">
-                <img src="images/star-white.svg" alt="">
-            </div>
+            <button class="nav-sparkle turbo-trigger" type="button" aria-label="Open surprise">
+    <img src="images/star-white.svg" alt="">
+</button>
 
 
             <a class="logo" href="index.html">
@@ -397,7 +397,53 @@
 
     </div>
 </footer>
+<!-- ==================================================
+     TURBO EASTER EGG
+================================================== -->
 
+<div class="turbo-popup" id="turboPopup">
+
+    <div class="turbo-card">
+
+        <button
+            class="turbo-close"
+            id="turboClose"
+            type="button"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+        <img
+            class="turbo-image"
+            src="images/turbo.png"
+            alt="Turbo"
+        >
+
+        <p class="turbo-meow">meow.</p>
+
+    </div>
+
+</div>
+    <script>
+    const turboTrigger = document.querySelector(".turbo-trigger");
+    const turboPopup = document.getElementById("turboPopup");
+    const turboClose = document.getElementById("turboClose");
+
+    turboTrigger.addEventListener("click", () => {
+        turboPopup.classList.add("show");
+    });
+
+    turboClose.addEventListener("click", () => {
+        turboPopup.classList.remove("show");
+    });
+
+    turboPopup.addEventListener("click", (event) => {
+        if (event.target === turboPopup) {
+            turboPopup.classList.remove("show");
+        }
+    });
+</script>
 
 </body>
 
