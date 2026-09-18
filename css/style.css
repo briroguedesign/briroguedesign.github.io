@@ -1046,13 +1046,20 @@ p {
     object-fit: contain;
 }
 
-.about-arrow-placeholder {
-    position: absolute;
-    right: 8%;
-    bottom: 80px;
+/* ------------------------------
+   ABOUT HERO — ARROW
+------------------------------ */
 
-    font-size: 4rem;
-    transform: rotate(-15deg);
+.about-arrow {
+    position: absolute;
+
+    width: 115px;
+    height: auto;
+
+    right: 8%;
+    bottom: 17%;
+
+    z-index: 3;
 }
 
 .about-handwriting {
