@@ -3356,6 +3356,9 @@ p {
 ------------------------------ */
 
 .work-hero {
+    position: relative;
+    overflow: hidden;
+
     background: var(--blue);
     color: var(--off-white);
 }
@@ -3363,6 +3366,28 @@ p {
 .work-hero-content {
     padding-top: 85px;
     padding-bottom: 75px;
+}
+/* ------------------------------
+   WORK HERO — HALF TOPO PATTERN
+------------------------------ */
+
+.work-hero::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 50%;
+    height: 100%;
+
+    background-image: url("../images/topo-pattern-half.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+
+    pointer-events: none;
+    z-index: 0;
 }
 
 .work-hero h1 {
