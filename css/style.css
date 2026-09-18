@@ -1336,6 +1336,8 @@ p {
 ------------------------------ */
 
 .beyond-design {
+    position: relative;
+
     background: var(--blue);
     color: var(--off-white);
 
