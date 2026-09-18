@@ -3936,3 +3936,160 @@ p {
 .photo-placeholder.square {
     aspect-ratio: 1 / 1;
 }
+
+/* ==================================================
+   TURBO EASTER EGG
+================================================== */
+
+/* make star behave like a button without looking like one */
+
+.turbo-trigger {
+    background: none;
+    border: none;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+
+/* darkened background */
+
+.turbo-popup {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(0, 0, 0, .25);
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 9999;
+
+    transition:
+        opacity .2s ease,
+        visibility .2s ease;
+}
+
+
+/* show popup */
+
+.turbo-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* actual popup card */
+
+.turbo-card {
+    position: relative;
+
+    width: min(380px, 90vw);
+
+    padding: 18px 18px 25px;
+
+    background: var(--off-white);
+    border-radius: 22px;
+
+    text-align: center;
+
+    transform: scale(.6) rotate(-4deg);
+    opacity: 0;
+}
+
+
+/* POP */
+
+.turbo-popup.show .turbo-card {
+    animation: turbo-pop .45s cubic-bezier(.34, 1.56, .64, 1) forwards;
+}
+
+
+/* cat */
+
+.turbo-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 14px;
+}
+
+
+/* meow */
+
+.turbo-meow {
+    margin-top: 15px;
+
+    color: var(--blue);
+
+    font-family: "Bryndan Write", sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+
+/* close button */
+
+.turbo-close {
+    position: absolute;
+
+    top: 8px;
+    right: 10px;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--blue);
+    color: var(--off-white);
+
+    font-family: "Aileron", Arial, sans-serif;
+    font-size: 1.4rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    transition: transform .2s ease;
+}
+
+.turbo-close:hover {
+    transform: rotate(10deg) scale(1.08);
+}
+
+
+/* pop animation */
+
+@keyframes turbo-pop {
+
+    0% {
+        transform: scale(.6) rotate(-4deg);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.06) rotate(1deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
+
+}
