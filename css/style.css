@@ -332,25 +332,26 @@ p {
 }
 
 
-/* PLACEHOLDER FOR STAMP */
+/* ------------------------------
+   WHY — CIRCULAR GRAPHIC
+------------------------------ */
 
-.graphic-placeholder {
+.why-circle {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border: 2px dashed var(--blue);
-
-    font-size: 0.7rem;
+    width: 100%;
+    height: 100%;
 }
 
-.circle-placeholder {
-    width: 210px;
-    aspect-ratio: 1;
+.why-circle img {
+    display: block;
 
-    justify-self: center;
+    width: clamp(280px, 24vw, 430px);
+    height: auto;
 
-    border-radius: 50%;
+    object-fit: contain;
 }
 
 
