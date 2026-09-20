@@ -4709,3 +4709,312 @@ p {
         min-height: 250px;
     }
 }
+
+/* ==================================================
+   BRIROGUE MOBILE POLISH V3 â€” SEP 20 2026
+   Consistent overlaps + refined mobile compositions
+================================================== */
+
+/* CONTACT â€” restore outlined overlap treatment on both desktop + mobile */
+.contact-intro h1,
+.other-contact-info h2 {
+    color: var(--off-white);
+    -webkit-text-stroke: 9px var(--blue);
+    paint-order: stroke fill;
+}
+
+.other-contact-info h2 {
+    color: var(--blue);
+    -webkit-text-stroke-color: var(--off-white);
+}
+
+@media (max-width: 767px) {
+
+    /* ----------------------------------------------
+       ALL STACKED DISPLAY HEADLINES
+       Same overlap amount between every line.
+    ---------------------------------------------- */
+    .hero-title,
+    .why-title,
+    .cta-title,
+    .about-more-title,
+    .beyond-title,
+    .about-cta-title,
+    .services-title,
+    .services-work-title,
+    .brand-more-title,
+    .services-cta-title,
+    .work-title {
+        line-height: 1;
+    }
+
+    .hero-title span,
+    .why-title span,
+    .cta-title span,
+    .about-more-title span,
+    .beyond-title span,
+    .about-cta-title span,
+    .services-title span,
+    .services-work-title span,
+    .brand-more-title span,
+    .services-cta-title span,
+    .work-title span {
+        line-height: .78 !important;
+        transform: none !important;
+        margin-top: 0 !important;
+    }
+
+    .hero-title span + span,
+    .why-title span + span,
+    .cta-title span + span,
+    .about-more-title span + span,
+    .beyond-title span + span,
+    .about-cta-title span + span,
+    .services-title span + span,
+    .services-work-title span + span,
+    .brand-more-title span + span,
+    .services-cta-title span + span,
+    .work-title span + span {
+        margin-top: -.15em !important;
+    }
+
+    /* HOME â€” WHY: pull stamp inward and tuck it beside headline */
+    .why-copy h2 {
+        width: calc(100% - 112px);
+        margin-bottom: 34px;
+    }
+
+    .why-circle {
+        top: 18px;
+        right: 18px;
+        width: 92px;
+        height: 92px;
+    }
+
+    .why-circle img {
+        width: 92px;
+        height: 92px;
+    }
+
+    /* WORK â€” keep topo decoration away from paragraph */
+    .work-hero-content {
+        position: relative;
+        z-index: 2;
+        padding-bottom: 26px;
+    }
+
+    .work-hero::before {
+        top: 0;
+        right: 0;
+        width: 48%;
+        height: 72%;
+        bottom: auto;
+        background-position: right top;
+        background-size: auto 100%;
+        opacity: .32;
+        z-index: 0;
+    }
+
+    .work-hero-content p {
+        position: relative;
+        z-index: 3;
+        margin-top: 16px;
+        max-width: 88%;
+    }
+
+    /* ABOUT HERO â€” headline across top, copy left, portrait right */
+    .about-hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(150px, .85fr);
+        grid-template-rows: auto auto;
+        column-gap: 20px;
+        row-gap: 28px;
+        align-items: center;
+        min-height: 0;
+        padding-top: 64px;
+        padding-bottom: 62px;
+    }
+
+    .about-hero-copy {
+        display: contents;
+    }
+
+    .about-hero-copy h1 {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        margin: 0;
+        font-size: clamp(3.8rem, 15vw, 5rem);
+    }
+
+    .about-hero-copy p {
+        grid-column: 1;
+        width: 100%;
+        margin: 0 0 18px;
+        font-size: clamp(.82rem, 2.7vw, 1rem);
+        line-height: 1.18;
+    }
+
+    .about-hero-copy p:first-of-type {
+        align-self: end;
+    }
+
+    .about-portrait-area {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+        align-self: center;
+        min-height: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0 10px 0 0;
+        justify-content: center;
+    }
+
+    .about-portrait-placeholder {
+        width: min(100%, 225px);
+        margin: 0 auto;
+    }
+
+    .about-portrait-placeholder img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-arrow {
+        width: 58px;
+        right: 3%;
+        bottom: 15%;
+    }
+
+    .about-handwriting {
+        right: 4%;
+        bottom: -2%;
+        max-width: 92px;
+        font-size: .62rem;
+    }
+
+    /* ABOUT â€” BEYOND: editorial split instead of strip dropped below */
+    .beyond-design {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .beyond-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(155px, .92fr);
+        grid-template-rows: auto auto;
+        column-gap: 22px;
+        row-gap: 28px;
+        align-items: center;
+    }
+
+    .beyond-copy {
+        display: contents;
+    }
+
+    .beyond-copy h2 {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        margin: 0;
+    }
+
+    .beyond-copy p,
+    .beyond-copy h3 {
+        grid-column: 1;
+        width: 100%;
+        max-width: none;
+    }
+
+    .beyond-copy p {
+        margin-top: 0;
+        margin-bottom: 18px;
+        font-size: clamp(.82rem, 2.7vw, 1rem);
+        line-height: 1.18;
+    }
+
+    .beyond-copy h3 {
+        margin-top: 4px;
+        font-size: clamp(1.2rem, 4vw, 1.55rem);
+    }
+
+    .beyond-photo-strip {
+        grid-column: 2;
+        grid-row: 2 / span 3;
+        align-self: center;
+        position: relative;
+        inset: auto;
+        width: 100%;
+        max-width: 230px;
+        height: auto;
+        margin: 0 auto;
+        transform: rotate(2deg);
+        overflow: visible;
+    }
+
+    .beyond-photo-strip img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    /* CONTACT â€” outlined display type on phone too */
+    .contact-intro h1 {
+        color: var(--off-white);
+        -webkit-text-stroke: 4px var(--blue);
+        paint-order: stroke fill;
+        line-height: .68;
+    }
+
+    .other-contact-info h2 {
+        color: var(--blue);
+        -webkit-text-stroke: 4px var(--off-white);
+        paint-order: stroke fill;
+        line-height: .7;
+    }
+}
+
+/* Narrow phones: keep the side-by-side About compositions usable */
+@media (max-width: 430px) {
+    .why-copy h2 {
+        width: calc(100% - 92px);
+    }
+
+    .why-circle {
+        right: 8px;
+        width: 78px;
+        height: 78px;
+    }
+
+    .why-circle img {
+        width: 78px;
+        height: 78px;
+    }
+
+    .about-hero-grid {
+        grid-template-columns: minmax(0, 1.05fr) minmax(125px, .75fr);
+        column-gap: 14px;
+        padding-top: 58px;
+    }
+
+    .about-hero-copy p {
+        font-size: .78rem;
+    }
+
+    .about-arrow {
+        width: 48px;
+    }
+
+    .about-handwriting {
+        max-width: 76px;
+        font-size: .55rem;
+    }
+
+    .beyond-grid {
+        grid-template-columns: minmax(0, 1.05fr) minmax(125px, .75fr);
+        column-gap: 14px;
+    }
+
+    .beyond-copy p {
+        font-size: .78rem;
+    }
+}
