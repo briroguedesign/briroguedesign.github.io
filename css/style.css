@@ -4120,203 +4120,592 @@ p {
 }
 
 /* ==================================================
-   MOBILE COMPOSITION V2 â€” PHONE ONLY
-   Purpose-built phone layouts. Keep this section LAST.
+   BRIROGUE RESPONSIVE POLISH â€” SEPT 2026
+   Requested mobile composition refinements
 ================================================== */
+
+/* Contact display type: tighter on desktop + mobile */
+.contact-intro h1,
+.other-contact-info h2 {
+    line-height: .66;
+}
+
+/* Remove form smiley everywhere */
+.smiley-placeholder {
+    display: none !important;
+}
+
 @media (max-width: 767px) {
-    :root { --page-padding: 20px; }
 
-    html, body { overflow-x: hidden !important; }
-    .container { width: 100%; max-width: 100%; padding-left: var(--page-padding); padding-right: var(--page-padding); }
-    .nav.container { padding-left: var(--page-padding); padding-right: var(--page-padding); }
-
-    /* NAV */
-    .nav { height: 78px !important; display: grid !important; grid-template-columns: 42px 1fr 42px !important; }
-    .nav-sparkle { grid-column: 1 !important; grid-row: 1 !important; }
-    .logo { grid-column: 2 !important; grid-row: 1 !important; justify-self: center !important; }
-    .logo img { width: 126px !important; }
-    .nav-toggle { display: flex !important; grid-column: 3 !important; grid-row: 1 !important; justify-self: end !important; }
-    .nav-links {
-        position: absolute !important;
-        top: 68px !important;
-        left: var(--page-padding) !important;
-        right: var(--page-padding) !important;
-        width: auto !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 16px !important;
-        padding: 22px 24px !important;
-        margin: 0 !important;
-        border-radius: 18px !important;
-        background: var(--off-white) !important;
-        color: var(--blue) !important;
-        opacity: 0 !important;
-        visibility: hidden !important;
-        pointer-events: none !important;
-        transform: translateY(-8px) !important;
-        z-index: 100 !important;
+    :root {
+        --page-padding: 22px;
     }
-    .nav.nav-open .nav-links { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; transform: translateY(0) !important; }
 
-    /* DISPLAY TYPE â€” readable overlap instead of collision */
-    .hero-title span, .why-title span, .cta-title span,
-    .about-more-title span, .beyond-title span, .about-cta-title span,
-    .services-title span, .services-work-title span, .brand-more-title span,
-    .services-cta-title span, .work-title span {
+    /* ----------------------------------------------
+       SHARED MOBILE DISPLAY TYPE â€” controlled overlap
+    ---------------------------------------------- */
+    .hero-title span,
+    .why-title span,
+    .cta-title span,
+    .about-more-title span,
+    .beyond-title span,
+    .about-cta-title span,
+    .services-title span,
+    .services-work-title span,
+    .brand-more-title span,
+    .services-cta-title span,
+    .work-title span {
+        line-height: .76;
         transform: none !important;
-        line-height: .88 !important;
-        -webkit-text-stroke-width: 3px !important;
     }
 
-    /* HOME */
-    .hero { min-height: auto !important; }
-    .hero-content { min-height: calc(100svh - 78px) !important; padding-top: 72px !important; padding-bottom: 90px !important; justify-content: flex-start !important; }
-    .hero h1 { font-size: clamp(4.2rem, 20vw, 5.35rem) !important; line-height: .88 !important; max-width: 100% !important; }
-    .hero-description { width: 100% !important; max-width: 340px !important; margin-top: 42px !important; }
-    .why { padding: 70px 0 !important; }
-    .why-grid { display: flex !important; flex-direction: column !important; gap: 42px !important; }
-    .why-copy h2 { font-size: clamp(3.25rem, 15vw, 4.25rem) !important; line-height: .88 !important; }
-    .why-circle { align-self: flex-end !important; width: min(58vw, 220px) !important; }
-    .project-grid, .values-grid { grid-template-columns: 1fr !important; }
-    .cta { min-height: 0 !important; padding: 70px 0 !important; }
-    .cta-content { padding: 0 !important; }
-    .cta h2 { font-size: clamp(3rem, 14vw, 4rem) !important; line-height: .88 !important; }
+    .hero-title span + span,
+    .why-title span + span,
+    .cta-title span + span,
+    .about-more-title span + span,
+    .beyond-title span + span,
+    .about-cta-title span + span,
+    .services-title span + span,
+    .services-work-title span + span,
+    .brand-more-title span + span,
+    .services-cta-title span + span,
+    .work-title span + span {
+        margin-top: -.08em;
+    }
 
-    /* ABOUT HERO */
-    .about-hero-grid { display: flex !important; flex-direction: column !important; min-height: 0 !important; gap: 45px !important; padding-top: 50px !important; padding-bottom: 55px !important; }
-    .about-hero-copy { width: 100% !important; }
-    .about-hero-copy h1 { font-size: clamp(4.2rem, 18vw, 5.2rem) !important; line-height: .9 !important; margin-bottom: 28px !important; }
-    .about-hero-copy p { width: 100% !important; font-size: .94rem !important; line-height: 1.32 !important; }
-    .about-portrait-area { min-height: 0 !important; width: 100% !important; padding: 20px 0 55px !important; }
-    .about-portrait-placeholder { width: min(78vw, 300px) !important; height: auto !important; margin: 0 auto !important; }
-    .about-portrait-placeholder img { width: 100% !important; max-width: 100% !important; height: auto !important; }
-    .about-arrow { width: 72px !important; right: 7% !important; bottom: 8% !important; }
-    .about-handwriting { right: 2% !important; bottom: 0 !important; }
+    /* ----------------------------------------------
+       HOME â€” HERO
+    ---------------------------------------------- */
+    .hero {
+        min-height: min(760px, 100svh);
+    }
 
-    /* ABOUT BODY */
-    .about-more { padding: 70px 0 !important; }
-    .about-more-grid { display: flex !important; flex-direction: column !important; gap: 48px !important; }
-    .about-more-copy h2 { font-size: clamp(3.2rem, 14vw, 4.1rem) !important; }
-    .about-polaroid-area { min-height: 320px !important; }
-    .polaroid-placeholder { width: min(72vw, 275px) !important; }
+    .hero-content {
+        padding-top: 42px;
+        padding-bottom: 60px;
+    }
+
+    .hero h1 {
+        font-size: clamp(4.1rem, 19vw, 5.8rem);
+        line-height: .76;
+    }
+
+    .hero-description {
+        margin-top: 28px;
+    }
+
+    /* ----------------------------------------------
+       HOME â€” WHY / STAMP
+    ---------------------------------------------- */
+    .why {
+        position: relative;
+        padding-top: 62px;
+        padding-bottom: 64px;
+    }
+
+    .why-grid {
+        position: relative;
+        display: block;
+    }
+
+    .why-copy h2 {
+        width: calc(100% - 118px);
+        max-width: 430px;
+        margin-bottom: 38px;
+        font-size: clamp(3.25rem, 14vw, 4.5rem);
+        line-height: .76;
+    }
+
+    .why-copy p {
+        width: 100%;
+        max-width: none;
+    }
+
+    .why-circle {
+        position: absolute;
+        top: 4px;
+        right: 0;
+        width: 105px;
+        height: 105px;
+        display: block;
+    }
+
+    .why-circle img {
+        width: 105px;
+        max-width: 100%;
+    }
+
+    /* ----------------------------------------------
+       HOME â€” FEATURED WORK
+    ---------------------------------------------- */
+    .work {
+        padding-top: 58px;
+        padding-bottom: 64px;
+    }
+
+    .section-heading-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 18px;
+        margin-bottom: 32px;
+    }
+
+    .section-heading-row h2 {
+        max-width: 100%;
+        font-size: clamp(3.3rem, 14vw, 4.5rem);
+        line-height: .74;
+        color: var(--off-white);
+        -webkit-text-stroke: 4px var(--blue);
+        paint-order: stroke fill;
+    }
+
+    .section-heading-row .button {
+        align-self: flex-start;
+        min-width: 150px;
+        height: 42px;
+        padding: 0 20px;
+        font-size: .72rem;
+    }
+
+    .project-grid {
+        gap: 22px;
+    }
+
+    /* ----------------------------------------------
+       HOME â€” FINAL CTA
+    ---------------------------------------------- */
+    .cta h2 {
+        font-size: clamp(3rem, 13vw, 4.1rem);
+        line-height: .76;
+    }
+
+    .cta .button {
+        margin-top: 24px;
+    }
+
+    /* ----------------------------------------------
+       WORK
+    ---------------------------------------------- */
+    .work-hero-content {
+        padding-top: 48px;
+        padding-bottom: 38px;
+    }
+
+    .work-hero h1 {
+        font-size: clamp(3.7rem, 16vw, 5rem);
+        line-height: .76;
+    }
+
+    .work-hero-content p {
+        margin-top: 18px;
+    }
+
+    /* ----------------------------------------------
+       PHOTOGRAPHY
+    ---------------------------------------------- */
+    .photo-hero-content {
+        gap: 30px;
+        padding-top: 44px;
+        padding-bottom: 50px;
+    }
+
+    .photo-hero-copy h1 {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(3.1rem, 13.5vw, 4.5rem);
+        line-height: .78;
+        letter-spacing: -.055em;
+        white-space: normal;
+    }
+
+    .photo-hero-copy p {
+        margin-top: 22px;
+    }
+
+    /* ----------------------------------------------
+       ABOUT â€” HERO
+    ---------------------------------------------- */
+    .about-hero-grid {
+        gap: 8px;
+        padding-top: 38px;
+        padding-bottom: 38px;
+    }
+
+    .about-hero-copy h1 {
+        font-size: clamp(3.8rem, 16vw, 5rem);
+        line-height: .72;
+        margin-bottom: 24px;
+    }
+
+    .about-portrait-area {
+        min-height: 285px;
+        justify-content: flex-end;
+        padding-right: 8%;
+        margin-top: -4px;
+    }
+
+    .about-portrait-placeholder {
+        width: min(58vw, 245px);
+    }
+
+    .about-arrow {
+        width: 66px;
+        right: 3%;
+        bottom: 15%;
+    }
+
+    .about-handwriting {
+        right: 0;
+        bottom: 1%;
+        max-width: 115px;
+        font-size: .7rem;
+    }
+
+    /* ----------------------------------------------
+       ABOUT â€” MORE / POLAROID
+    ---------------------------------------------- */
+    .about-more {
+        padding-top: 58px;
+        padding-bottom: 58px;
+    }
+
+    .about-more-copy h2 {
+        font-size: clamp(3.35rem, 14vw, 4.45rem);
+        line-height: .76;
+        margin-bottom: 34px;
+    }
+
+    .about-polaroid-area {
+        min-height: 285px;
+        justify-content: flex-end;
+        padding-right: 5%;
+    }
+
+    .polaroid-placeholder {
+        width: min(60vw, 250px);
+        padding: 10px 10px 40px;
+        transform: rotate(5deg);
+    }
+
+    /* ----------------------------------------------
+       ABOUT â€” TOOLS
+    ---------------------------------------------- */
     .tools-strip {
-        width: 100% !important;
-        min-height: 0 !important;
-        margin: 48px 0 0 !important;
-        padding: 26px 22px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 22px !important;
-        border-radius: 20px !important;
+        width: 100%;
+        min-height: 0;
+        margin-top: 38px;
+        padding: 24px 20px 22px;
+        display: block;
+        border-radius: 20px;
     }
-    .tools-strip h3 { font-size: 1.6rem !important; line-height: .9 !important; }
-    .tools-strip h3 br { display: none !important; }
-    .tools-divider { display: none !important; }
-    .tools-list { width: 100% !important; display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 16px 12px !important; }
-    .tools-list img { width: 42px !important; height: 42px !important; }
-    .tools-list .tool-mug { width: 50px !important; height: 50px !important; }
 
-    .beyond-design { padding: 70px 0 0 !important; overflow: hidden !important; }
-    .beyond-grid { display: flex !important; flex-direction: column !important; gap: 38px !important; }
-    .beyond-copy { width: 100% !important; position: relative !important; z-index: 2 !important; }
-    .beyond-copy h2 { font-size: clamp(3.3rem, 15vw, 4.3rem) !important; line-height: .88 !important; }
+    .tools-strip h3 {
+        margin: 0 0 22px;
+        font-size: clamp(1.45rem, 6vw, 1.9rem);
+        line-height: .9;
+        white-space: nowrap;
+    }
+
+    .tools-strip h3 br {
+        display: none;
+    }
+
+    .tools-divider {
+        display: none;
+    }
+
+    .tools-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        align-items: center;
+        justify-items: center;
+        gap: 8px;
+    }
+
+    .tools-list img {
+        width: clamp(30px, 7vw, 40px);
+        height: clamp(30px, 7vw, 40px);
+    }
+
+    .tools-list .tool-mug {
+        width: clamp(38px, 8vw, 46px);
+        height: clamp(38px, 8vw, 46px);
+    }
+
+    .tool-plus {
+        font-size: 1.35rem;
+    }
+
+    /* ----------------------------------------------
+       ABOUT â€” BEYOND DESIGN
+    ---------------------------------------------- */
+    .beyond-design {
+        padding-top: 58px;
+        padding-bottom: 55px;
+    }
+
+    .beyond-grid {
+        gap: 24px;
+    }
+
+    .beyond-copy h2 {
+        font-size: clamp(3.6rem, 15vw, 4.8rem);
+        line-height: .76;
+        margin-bottom: 30px;
+    }
+
     .beyond-photo-strip {
-        position: relative !important;
-        inset: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        width: calc(100% + 40px) !important;
-        max-width: none !important;
-        height: auto !important;
-        margin: 0 -20px !important;
-        z-index: 1 !important;
+        position: relative;
+        inset: auto;
+        width: min(76%, 330px);
+        height: auto;
+        margin: 18px 4% 0 auto;
+        transform: rotate(3deg);
+        overflow: visible;
     }
-    .beyond-photo-strip img { display: block !important; width: 100% !important; max-width: none !important; height: auto !important; object-fit: contain !important; }
-    .about-cta { padding: 64px 0 !important; }
-    .about-cta-content { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 28px !important; }
-    .about-cta h2 { font-size: clamp(3rem, 14vw, 4rem) !important; }
 
-    /* SERVICES HERO */
-    .services-hero-grid { display: flex !important; flex-direction: column !important; gap: 42px !important; padding-top: 52px !important; padding-bottom: 70px !important; }
-    .services-hero-copy { width: 100% !important; }
-    .services-hero-copy h1 { font-size: clamp(3.7rem, 17vw, 4.8rem) !important; line-height: .88 !important; }
-    .services-hero-copy p { width: 100% !important; max-width: 360px !important; }
-    .services-hero-art { width: 100% !important; min-height: 280px !important; justify-content: center !important; }
-    .services-polaroid-placeholder { width: min(68vw, 255px) !important; }
+    .beyond-photo-strip img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
 
-    /* SERVICES LIST â€” true single column */
-    .services-list-section { padding: 72px 0 !important; }
-    .services-list-grid { display: flex !important; flex-direction: column !important; gap: 52px !important; }
-    .services-list-intro, .services-accordion { width: 100% !important; max-width: none !important; }
-    .services-list-intro h2 { font-size: clamp(3.35rem, 15vw, 4.3rem) !important; line-height: .88 !important; }
-    .services-list-intro p { width: 100% !important; max-width: 340px !important; margin-top: 28px !important; }
-    .service-item { width: 100% !important; }
-    .service-item summary { width: 100% !important; min-height: 68px !important; }
-    .service-item summary h3 { font-size: 1.12rem !important; }
-    .service-details { padding: 0 36px 20px 0 !important; }
+    .about-cta h2 {
+        font-size: clamp(2.9rem, 12.5vw, 3.9rem);
+        line-height: .76;
+    }
 
-    /* BRAND MORE â€” cards get room */
-    .brand-more { padding: 72px 0 !important; }
-    .brand-more-grid { display: flex !important; flex-direction: column !important; gap: 48px !important; }
-    .brand-more-copy, .brand-comparison { width: 100% !important; max-width: none !important; }
-    .brand-more-copy h2 { font-size: clamp(3.35rem, 15vw, 4.3rem) !important; line-height: .88 !important; }
-    .brand-more-copy p { width: 100% !important; max-width: 340px !important; }
-    .brand-comparison { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 14px !important; }
-    .comparison-card { min-width: 0 !important; min-height: 320px !important; padding: 14px !important; border-radius: 16px !important; }
-    .comparison-card h3 { font-size: 1rem !important; line-height: .95 !important; }
-    .comparison-copy-placeholder { font-size: .7rem !important; }
+    /* ----------------------------------------------
+       CONTACT
+    ---------------------------------------------- */
+    .contact-intro h1 {
+        font-size: clamp(3.9rem, 17vw, 5.2rem);
+        line-height: .64;
+    }
 
-    .services-cta { padding: 68px 0 !important; }
-    .services-cta-content { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 30px !important; }
-    .services-cta h2 { font-size: clamp(3.1rem, 14vw, 4rem) !important; line-height: .88 !important; max-width: 100% !important; }
+    .contact-intro-copy {
+        margin-top: 30px;
+    }
 
-    /* WORK */
-    .work-hero-content { padding-top: 70px !important; padding-bottom: 75px !important; }
-    .work-hero h1 { font-size: clamp(3.7rem, 17vw, 4.8rem) !important; line-height: .88 !important; }
-    .work-hero::before { width: 70% !important; right: -22% !important; opacity: .32 !important; background-size: auto 100% !important; }
-    .work-grid { grid-template-columns: 1fr !important; }
+    .form-bottom {
+        align-items: center;
+    }
 
-    /* PHOTOGRAPHY */
-    .photo-hero-content { display: flex !important; flex-direction: column !important; gap: 40px !important; min-height: 0 !important; padding-top: 58px !important; padding-bottom: 68px !important; }
-    .photo-hero-copy h1 { font-size: clamp(3.8rem, 17vw, 4.8rem) !important; }
-    .photo-hero-image-placeholder { width: 100% !important; height: auto !important; aspect-ratio: 4 / 3 !important; }
-    .photo-gallery { column-count: 1 !important; }
+    .form-note {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-    /* CONTACT */
-    .contact-hero-grid { display: flex !important; flex-direction: column !important; gap: 48px !important; padding-top: 55px !important; padding-bottom: 70px !important; }
-    .contact-intro, .contact-form-card { width: 100% !important; max-width: none !important; }
-    .contact-intro h1 { font-size: clamp(4rem, 18vw, 5rem) !important; line-height: .86 !important; }
-    .contact-intro-copy br { display: none !important; }
-    .form-row { grid-template-columns: 1fr !important; }
-    .contact-other-grid { display: flex !important; flex-direction: column !important; }
+    .other-contact-info h2 {
+        font-size: clamp(3.15rem, 14vw, 4.3rem);
+        line-height: .66;
+        margin-bottom: 34px;
+    }
 
-    /* FOOTER â€” no smashed links */
-    .site-footer { padding: 52px 0 !important; }
-    .site-footer-grid { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 34px !important; }
-    .footer-brand { width: 100% !important; align-items: flex-start !important; }
-    .footer-logo img { width: 150px !important; }
+    /* ----------------------------------------------
+       SERVICES â€” HERO
+    ---------------------------------------------- */
+    .services-hero-grid {
+        display: block;
+        padding-top: 42px;
+        padding-bottom: 55px;
+    }
+
+    .services-hero-copy h1 {
+        font-size: clamp(3.7rem, 16vw, 5rem);
+        line-height: .76;
+        margin-bottom: 28px;
+    }
+
+    .services-hero-copy .button {
+        margin-top: 30px;
+    }
+
+    .services-hero-art {
+        display: none !important;
+    }
+
+    /* ----------------------------------------------
+       SERVICES â€” ACCORDION
+    ---------------------------------------------- */
+    .services-list-intro h2 {
+        font-size: clamp(3.45rem, 14.5vw, 4.6rem);
+        line-height: .76;
+    }
+
+    .services-list-intro p {
+        margin-top: 24px;
+    }
+
+    /* ----------------------------------------------
+       SERVICES â€” BRAND MORE
+       display:contents lets the button follow comparison
+       without changing HTML.
+    ---------------------------------------------- */
+    .brand-more-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .brand-more-copy {
+        display: contents;
+    }
+
+    .brand-more-title {
+        order: 1;
+        font-size: clamp(3.45rem, 14.5vw, 4.6rem) !important;
+        line-height: .76;
+    }
+
+    .brand-more-copy > p {
+        order: 2;
+        width: 100%;
+        margin-top: 28px;
+    }
+
+    .brand-comparison {
+        order: 3;
+        margin-top: 34px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .comparison-card {
+        min-height: 300px;
+    }
+
+    .brand-more-button {
+        order: 4;
+        justify-self: start;
+        margin-top: 28px;
+    }
+
+    .services-cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .services-cta h2 {
+        font-size: clamp(3rem, 13vw, 4rem);
+        line-height: .76;
+    }
+
+    /* ----------------------------------------------
+       MOBILE FOOTER â€” compact + intentional
+    ---------------------------------------------- */
+    .site-footer {
+        padding: 36px 0 38px;
+    }
+
+    .site-footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .footer-brand {
+        align-items: center;
+        text-align: center;
+        padding-bottom: 26px;
+    }
+
+    .footer-brand img,
+    .footer-logo img {
+        width: 138px;
+    }
+
+    .footer-tagline,
+    .footer-brand p {
+        font-size: .78rem;
+    }
+
+    .footer-copyright {
+        font-size: .66rem !important;
+    }
+
+    .footer-socials,
+    .footer-nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px 28px;
+        justify-content: stretch;
+        padding: 22px 0;
+        border-top: 1px solid rgba(245, 244, 242, .55);
+    }
+
     .footer-socials {
-        width: 100% !important;
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        justify-content: initial !important;
-        gap: 14px 24px !important;
-        padding: 24px 0 !important;
-        margin: 0 !important;
-        border-top: 1px solid rgba(245,244,242,.55) !important;
-        border-bottom: 1px solid rgba(245,244,242,.55) !important;
+        font-size: .78rem;
     }
-    .footer-socials a { display: block !important; width: auto !important; font-size: .88rem !important; font-weight: 400 !important; }
-    .footer-nav { width: 100% !important; display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 14px 24px !important; justify-content: initial !important; }
-    .footer-nav a { font-size: .88rem !important; }
+
+    .footer-nav {
+        padding-bottom: 0;
+        font-size: .78rem;
+    }
+
+    .footer-socials a,
+    .footer-nav a {
+        width: auto;
+        display: block;
+        text-align: left;
+    }
 }
 
 @media (max-width: 430px) {
-    :root { --page-padding: 18px; }
-    .hero h1 { font-size: clamp(3.9rem, 19vw, 4.8rem) !important; }
-    .brand-comparison { grid-template-columns: 1fr !important; }
-    .comparison-card { min-height: 300px !important; }
-    .footer-socials, .footer-nav { grid-template-columns: 1fr 1fr !important; }
+    :root {
+        --page-padding: 18px;
+    }
+
+    .why-copy h2 {
+        width: calc(100% - 92px);
+    }
+
+    .why-circle,
+    .why-circle img {
+        width: 82px;
+        height: 82px;
+    }
+
+    .tools-strip {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .tools-strip h3 {
+        font-size: 1.35rem;
+    }
+
+    .tools-list {
+        gap: 5px;
+    }
+
+    .tools-list img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .tools-list .tool-mug {
+        width: 37px;
+        height: 37px;
+    }
+
+    .beyond-photo-strip {
+        width: 82%;
+        margin-right: 0;
+    }
+
+    .brand-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-card {
+        min-height: 250px;
+    }
 }
