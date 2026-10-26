@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,12 +11,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+<body class="photography-page">
 
-<body>
-
-    <!-- ==================================================
+    <!-- ==========================================
          PHOTOGRAPHY HERO
-    ================================================== -->
+    ========================================== -->
 
     <section class="photo-hero">
 
@@ -30,17 +30,17 @@
                     <img src="images/logo-white.svg" alt="BriRogue Design">
                 </a>
 
-                <!-- MOBILE MENU BUTTON -->
-            <button
-                class="nav-toggle"
-                type="button"
-                aria-label="Open menu"
-                aria-expanded="false"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+                <!-- MOBILE HAMBURGER -->
+                <button
+                    class="nav-toggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
                 <div class="nav-links">
                     <a href="work.html">work</a>
@@ -52,10 +52,8 @@
             </nav>
         </header>
 
-
         <div class="container photo-hero-content">
 
-            <!-- LEFT -->
             <div class="photo-hero-copy">
 
                 <h1>photography.</h1>
@@ -66,10 +64,13 @@
 
             </div>
 
-
-            <!-- RIGHT — FUTURE HERO IMAGE -->
+            <!-- SONY CAMERA IMAGE -->
             <div class="photo-hero-image-placeholder">
-                <span>hero image</span>
+                <img
+                    class="photo-camera-image"
+                    src="images/photography/sonya7iii.png"
+                    alt="Sony A7 III camera"
+                >
             </div>
 
         </div>
@@ -77,10 +78,9 @@
     </section>
 
 
-
-    <!-- ==================================================
+    <!-- ==========================================
          PHOTOGRAPHY GALLERY
-    ================================================== -->
+    ========================================== -->
 
     <main class="photo-gallery-section">
 
@@ -88,61 +88,67 @@
 
             <div class="photo-gallery">
 
-                <!--
-                    Replace these placeholders later with:
-
-                    <div class="photo-gallery-item">
-                        <img src="images/photography/your-photo.jpg" alt="">
-                    </div>
-                -->
-
-
-                <div class="photo-placeholder landscape">
-                    photo
+                <!-- PHOTO 01 -->
+                <div class="photo-gallery-item">
+                    <img
+                        src="images/photography/darkhorsescfront.jpg"
+                        alt="Ford Mustang Dark Horse front view"
+                        loading="lazy"
+                    >
                 </div>
 
-                <div class="photo-placeholder portrait">
-                    photo
+                <!-- PHOTO 02 -->
+                <div class="photo-gallery-item">
+                    <img
+                        src="images/photography/darkhorsesclow.jpg"
+                        alt="Ford Mustang Dark Horse low-angle photograph"
+                        loading="lazy"
+                    >
                 </div>
 
-                <div class="photo-placeholder landscape">
-                    photo
+                <!-- PHOTO 03 -->
+                <div class="photo-gallery-item">
+                    <img
+                        src="images/photography/broncoraptor1.jpg"
+                        alt="Ford Bronco Raptor"
+                        loading="lazy"
+                    >
                 </div>
 
-                <div class="photo-placeholder square">
-                    photo
+                <!-- PHOTO 04 -->
+                <div class="photo-gallery-item">
+                    <img
+                        src="images/photography/caddylowfront.jpg"
+                        alt="Cadillac low-angle front photograph"
+                        loading="lazy"
+                    >
                 </div>
 
-                <div class="photo-placeholder landscape">
-                    photo
+                <!-- PHOTO 05 -->
+                <div class="photo-gallery-item">
+                    <img
+                        src="images/photography/caddy1.jpg"
+                        alt="Cadillac automotive photograph"
+                        loading="lazy"
+                    >
                 </div>
 
-                <div class="photo-placeholder portrait">
-                    photo
+                <!-- PHOTO 06 -->
+                <div class="photo-gallery-item">
+                    <img
+                        src="images/photography/gary1.jpg"
+                        alt="Automotive photography"
+                        loading="lazy"
+                    >
                 </div>
 
-                <div class="photo-placeholder landscape">
-                    photo
-                </div>
-
-                <div class="photo-placeholder square">
-                    photo
-                </div>
-
-                <div class="photo-placeholder portrait">
-                    photo
-                </div>
-
-                <div class="photo-placeholder landscape">
-                    photo
-                </div>
-
-                <div class="photo-placeholder landscape">
-                    photo
-                </div>
-
-                <div class="photo-placeholder portrait">
-                    photo
+                <!-- PHOTO 07 -->
+                <div class="photo-gallery-item">
+                    <img
+                        src="images/photography/roadatlantagt3(1).jpg"
+                        alt="GT3 race car at Road Atlanta"
+                        loading="lazy"
+                    >
                 </div>
 
             </div>
@@ -152,10 +158,9 @@
     </main>
 
 
-
-    <!-- ==================================================
+    <!-- ==========================================
          FOOTER
-    ================================================== -->
+    ========================================== -->
 
     <footer class="site-footer">
 
@@ -177,14 +182,12 @@
 
             </div>
 
-
             <div class="footer-socials">
                 <a href="#" target="_blank" rel="noopener">instagram</a>
                 <a href="#" target="_blank" rel="noopener">linkedin</a>
                 <a href="#" target="_blank" rel="noopener">behance</a>
                 <a href="#" target="_blank" rel="noopener">pinterest</a>
             </div>
-
 
             <nav class="footer-nav" aria-label="Footer navigation">
                 <a href="work.html">work</a>
@@ -197,40 +200,33 @@
 
     </footer>
 
+
+    <!-- ==========================================
+         MOBILE NAV SCRIPT
+    ========================================== -->
+
     <script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const nav = document.querySelector(".nav");
+        const navToggle = document.querySelector(".nav-toggle");
+        const nav = document.querySelector(".nav");
 
-    if (navToggle && nav) {
-
-        navToggle.addEventListener("click", () => {
-
-            const isOpen = nav.classList.toggle("nav-open");
-
-            navToggle.setAttribute(
-                "aria-expanded",
-                isOpen
-            );
-
-        });
-
-        document.querySelectorAll(".nav-links a").forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                nav.classList.remove("nav-open");
+        if (navToggle && nav) {
+            navToggle.addEventListener("click", () => {
+                const isOpen = nav.classList.toggle("nav-open");
 
                 navToggle.setAttribute(
                     "aria-expanded",
-                    "false"
+                    String(isOpen)
                 );
-
             });
 
-        });
-
-    }
-</script>
+            document.querySelectorAll(".nav-links a").forEach(link => {
+                link.addEventListener("click", () => {
+                    nav.classList.remove("nav-open");
+                    navToggle.setAttribute("aria-expanded", "false");
+                });
+            });
+        }
+    </script>
 
 </body>
 </html>
