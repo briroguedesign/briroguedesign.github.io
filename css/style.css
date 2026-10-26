@@ -5127,3 +5127,100 @@ p {
     }
 }
 
+/* ==========================================
+   PHOTOGRAPHY LIGHTBOX
+========================================== */
+
+.photography-page .photo-gallery-item {
+    cursor: zoom-in;
+}
+
+.photo-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(7, 8, 15, 0.96);
+    padding: 65px 70px;
+}
+
+.photo-lightbox.is-open {
+    display: flex;
+}
+
+.photo-lightbox .lightbox-image {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100dvh - 130px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.photo-lightbox button {
+    position: absolute;
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.lightbox-close {
+    top: 15px;
+    right: 25px;
+    font-size: 42px;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 55px;
+    padding: 12px;
+}
+
+.lightbox-prev {
+    left: 12px;
+}
+
+.lightbox-next {
+    right: 12px;
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+}
+
+@media (max-width: 767px) {
+    .photo-lightbox {
+        padding: 65px 12px;
+    }
+
+    .photo-lightbox .lightbox-image {
+        max-height: calc(100dvh - 130px);
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        font-size: 40px;
+        background: rgba(0, 0, 0, 0.35);
+    }
+
+    .lightbox-prev {
+        left: 2px;
+    }
+
+    .lightbox-next {
+        right: 2px;
+    }
+}
+
