@@ -5435,3 +5435,14 @@ p {
         columns: 1;
     }
 }
+
+/* SUGAR BLOOM — WHITE NAVIGATION LINKS */
+
+.sugar-bloom-page .brand-project-header .nav-links a {
+    color: #FFFFFF;
+}
+
+.sugar-bloom-page .brand-project-header .nav-links a:hover {
+    color: #D9E6FD;
+}
+
