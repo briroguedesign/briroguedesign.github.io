@@ -5224,3 +5224,178 @@ p {
     }
 }
 
+/* ==========================================
+   BRAND PROJECT TEMPLATE
+========================================== */
+
+.brand-project-page {
+  --project-cream: #fff6e6;
+  --project-accent: #90c3c8;
+  background: var(--project-cream);
+}
+
+/* Header */
+.brand-project-page .brand-project-header {
+  background: #0019ff;
+}
+
+/* Hero logo */
+.brand-project-page .brand-project-hero {
+  background: var(--project-cream);
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 8%;
+}
+
+.brand-project-page .brand-project-hero img {
+  display: block;
+  width: min(100%, 800px);
+  max-height: 420px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Color palette and typography */
+.brand-project-page .brand-project-identity {
+  background: var(--project-accent);
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 6%;
+}
+
+/* Logo variations */
+.brand-project-page .brand-project-variations {
+  background: var(--project-cream);
+  min-height: 310px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 6%;
+}
+
+.brand-project-page .brand-project-identity img,
+.brand-project-page .brand-project-variations img {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-project-page .brand-project-coming-soon {
+  font-family: "Aileron", sans-serif;
+  font-size: clamp(1.3rem, 3vw, 2.4rem);
+  font-weight: 900;
+  text-align: center;
+  opacity: 0.65;
+}
+
+.brand-project-page .brand-project-identity
+.brand-project-coming-soon {
+  color: var(--project-cream);
+}
+
+.brand-project-page .brand-project-variations
+.brand-project-coming-soon {
+  color: var(--project-accent);
+}
+
+/* About the brand */
+.brand-project-page .brand-project-about {
+  background: var(--project-accent);
+  color: var(--project-cream);
+  padding: 55px 6%;
+}
+
+.brand-project-page .brand-project-about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 32% 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.brand-project-page .brand-project-about h2 {
+  font-family: "Aileron", sans-serif;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-weight: 900;
+  line-height: 0.95;
+  margin: 0;
+}
+
+.brand-project-page .brand-project-about p {
+  border-left: 1px solid currentColor;
+  padding-left: 40px;
+  margin: 0;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.55;
+}
+
+/* Edge-to-edge gallery */
+.brand-project-page .brand-project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+
+.brand-project-page .brand-project-gallery-item {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--project-cream);
+}
+
+.brand-project-page .brand-project-gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .brand-project-page .brand-project-hero {
+    min-height: 320px;
+    padding: 50px 6%;
+  }
+
+  .brand-project-page .brand-project-about-inner {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .brand-project-page .brand-project-about p {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+  .brand-project-page .brand-project-hero {
+    min-height: 240px;
+    padding: 45px 7%;
+  }
+
+  .brand-project-page .brand-project-identity {
+    min-height: 160px;
+    padding: 25px 6%;
+  }
+
+  .brand-project-page .brand-project-variations {
+    min-height: 200px;
+    padding: 30px 6%;
+  }
+
+  .brand-project-page .brand-project-about {
+    padding: 45px 7%;
+  }
+
+  .brand-project-page .brand-project-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
