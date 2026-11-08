@@ -1,18 +1,68 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Sugar Bloom | BriRogue Design</title>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Sugar Bloom page-specific styling */
+
+    .sugar-bloom-page {
+      --project-cream: #fff6e6;
+      --project-accent: #90c3c8;
+    }
+
+    /* Keep the same blue header as other pages */
+    .sugar-bloom-page .brand-project-header {
+      background: #0019ff;
+    }
+
+    /* Smaller hero logo */
+    .sugar-bloom-page .brand-project-hero {
+      min-height: 350px;
+      padding: 65px 8%;
+    }
+
+    .sugar-bloom-page .brand-project-hero img {
+      display: block;
+      width: 100%;
+      max-width: 480px;
+      max-height: 280px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 600px) {
+      .sugar-bloom-page .brand-project-hero {
+        min-height: 250px;
+        padding: 45px 8%;
+      }
+
+      .sugar-bloom-page .brand-project-hero img {
+        max-width: 280px;
+        max-height: 190px;
+      }
+    }
+  </style>
 </head>
 
 <body class="brand-project-page sugar-bloom-page">
 
-  <!-- BRIROGUE HEADER -->
+  <!-- ==========================================
+       BRIROGUE NAVIGATION
+       Same structure as the other pages
+  ========================================== -->
+
   <header class="brand-project-header">
+
     <nav class="nav container">
+
       <a href="index.html" class="nav-sparkle">
         <img src="images/star-white.svg" alt="">
       </a>
@@ -21,111 +71,198 @@
         <img src="images/logo-white.svg" alt="BriRogue Design">
       </a>
 
-      <button class="nav-toggle" type="button"
-              aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="sugar-bloom-nav-links"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
-      <div class="nav-links">
+      <div class="nav-links" id="sugar-bloom-nav-links">
         <a href="work.html">work</a>
         <a href="about.html">about</a>
         <a href="services.html">services</a>
         <a href="contact.html">contact</a>
       </div>
+
     </nav>
+
   </header>
+
 
   <main>
 
-    <!-- 1. HERO LOGO -->
+    <!-- ==========================================
+         1. SUGAR BLOOM HERO
+    ========================================== -->
+
     <section class="brand-project-hero">
-      <img src="images/sugar-bloom/sugarbloom-logo.png"
-           alt="Sugar Bloom brand logo">
+
+      <img
+        src="images/sugar-bloom/sugarbloom-logo.png"
+        alt="Sugar Bloom logo"
+      >
+
     </section>
 
-    <!-- 2. COLOR PALETTE + TYPOGRAPHY -->
+
+    <!-- ==========================================
+         2. COLOR PALETTE + TYPOGRAPHY
+    ========================================== -->
+
     <section class="brand-project-identity">
+
       <div class="brand-project-coming-soon">
         color palette + typography
       </div>
 
-      <!-- Replace placeholder later with:
-      <img src="images/sugar-bloom/sugarbloom-brand-system.png"
-           alt="Sugar Bloom colors and typography">
+      <!--
+      When your PNG is ready, replace the placeholder above with:
+
+      <img
+        src="images/sugar-bloom/sugarbloom-brand-system.png"
+        alt="Sugar Bloom color palette and typography"
+      >
       -->
+
     </section>
 
-    <!-- 3. LOGO VARIATIONS -->
+
+    <!-- ==========================================
+         3. LOGO VARIATIONS
+    ========================================== -->
+
     <section class="brand-project-variations">
+
       <div class="brand-project-coming-soon">
         logo variations
       </div>
 
-      <!-- Replace placeholder later with:
-      <img src="images/sugar-bloom/sugarbloom-variations.png"
-           alt="Sugar Bloom logo variations">
+      <!--
+      When your PNG is ready, replace the placeholder above with:
+
+      <img
+        src="images/sugar-bloom/sugarbloom-variations.png"
+        alt="Sugar Bloom logo variations"
+      >
       -->
+
     </section>
 
-    <!-- 4. ABOUT THE BRAND -->
+
+    <!-- ==========================================
+         4. ABOUT THE BRAND
+    ========================================== -->
+
     <section class="brand-project-about">
+
       <div class="brand-project-about-inner">
-        <h2>about the<br>brand.</h2>
+
+        <h2>
+          about the<br>
+          brand.
+        </h2>
+
         <p>
           Sugar Bloom is a playful brand identity built around
           a bright, inviting visual world. Full project
           description coming soon.
         </p>
+
       </div>
+
     </section>
 
-    <!-- 5. PROJECT GALLERY -->
+
+    <!-- ==========================================
+         5. SUGAR BLOOM PROJECT GALLERY
+    ========================================== -->
+
     <section class="brand-project-gallery">
 
       <div class="brand-project-gallery-item">
-        <img src="images/sugar-bloom/sugarbloom-phone.png"
-             alt="Sugar Bloom phone design" loading="lazy">
+        <img
+          src="images/sugar-bloom/sugarbloom-phone.png"
+          alt="Sugar Bloom phone mockup"
+          loading="lazy"
+        >
       </div>
 
       <div class="brand-project-gallery-item">
-        <img src="images/sugar-bloom/sugarbloom-ad.png"
-             alt="Sugar Bloom advertisement" loading="lazy">
+        <img
+          src="images/sugar-bloom/sugarbloom-ad.png"
+          alt="Sugar Bloom advertisement"
+          loading="lazy"
+        >
       </div>
 
       <div class="brand-project-gallery-item">
-        <img src="images/sugar-bloom/sugarbloom-cards.png"
-             alt="Sugar Bloom cards" loading="lazy">
+        <img
+          src="images/sugar-bloom/sugarbloom-cards.png"
+          alt="Sugar Bloom business cards"
+          loading="lazy"
+        >
       </div>
 
       <div class="brand-project-gallery-item">
-        <img src="images/sugar-bloom/sugarbloom-door.png"
-             alt="Sugar Bloom storefront design" loading="lazy">
+        <img
+          src="images/sugar-bloom/sugarbloom-door.png"
+          alt="Sugar Bloom storefront"
+          loading="lazy"
+        >
       </div>
 
       <div class="brand-project-gallery-item">
-        <img src="images/sugar-bloom/sugarbloom-icecream.png"
-             alt="Sugar Bloom ice cream packaging" loading="lazy">
+        <img
+          src="images/sugar-bloom/sugarbloom-icecream.png"
+          alt="Sugar Bloom ice cream packaging"
+          loading="lazy"
+        >
       </div>
 
       <div class="brand-project-gallery-item">
-        <img src="images/sugar-bloom/sugarbloom-menu.png"
-             alt="Sugar Bloom menu" loading="lazy">
+        <img
+          src="images/sugar-bloom/sugarbloom-menu.png"
+          alt="Sugar Bloom menu design"
+          loading="lazy"
+        >
       </div>
 
     </section>
 
   </main>
 
-  <!-- BRIROGUE FOOTER -->
+
+  <!-- ==========================================
+       BRIROGUE FOOTER
+  ========================================== -->
+
   <footer class="site-footer">
+
     <div class="container site-footer-grid">
 
       <div class="footer-brand">
+
         <a href="index.html" class="footer-logo">
-          <img src="images/logo-white.svg" alt="BriRogue Design">
+          <img
+            src="images/logo-white.svg"
+            alt="BriRogue Design"
+          >
         </a>
-        <p class="footer-tagline">go rogue with your brand.</p>
-        <p class="footer-copyright">© 2026 brirogue design</p>
+
+        <p class="footer-tagline">
+          go rogue with your brand.
+        </p>
+
+        <p class="footer-copyright">
+          © 2026 brirogue design
+        </p>
+
       </div>
 
       <div class="footer-socials">
@@ -143,7 +280,13 @@
       </nav>
 
     </div>
+
   </footer>
+
+
+  <!-- ==========================================
+       MOBILE NAVIGATION
+  ========================================== -->
 
   <script>
     const navToggle = document.querySelector(".nav-toggle");
@@ -152,7 +295,11 @@
     if (navToggle && nav) {
       navToggle.addEventListener("click", () => {
         const isOpen = nav.classList.toggle("nav-open");
-        navToggle.setAttribute("aria-expanded", String(isOpen));
+
+        navToggle.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
       });
 
       document.querySelectorAll(".nav-links a").forEach(link => {
