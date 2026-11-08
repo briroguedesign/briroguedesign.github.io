@@ -5399,3 +5399,39 @@ p {
   }
 }
 
+
+/* ==========================================
+   SUGAR BLOOM — NATURAL IMAGE GALLERY
+========================================== */
+
+.sugar-bloom-page .brand-project-gallery {
+    display: block;
+    columns: 2;
+    column-gap: 0;
+}
+
+.sugar-bloom-page .brand-project-gallery-item {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    break-inside: avoid;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.sugar-bloom-page .brand-project-gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .sugar-bloom-page .brand-project-gallery {
+        columns: 1;
+    }
+}
