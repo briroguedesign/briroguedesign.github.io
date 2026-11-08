@@ -5436,13 +5436,19 @@ p {
     }
 }
 
-/* SUGAR BLOOM — WHITE NAVIGATION LINKS */
 
-.sugar-bloom-page .brand-project-header .nav-links a {
-    color: #FFFFFF;
+/* SUGAR BLOOM — FORCE WHITE NAV LINKS */
+
+body.sugar-bloom-page header.brand-project-header nav.nav .nav-links a,
+body.sugar-bloom-page header.brand-project-header nav.nav .nav-links a:link,
+body.sugar-bloom-page header.brand-project-header nav.nav .nav-links a:visited {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
 }
 
-.sugar-bloom-page .brand-project-header .nav-links a:hover {
-    color: #D9E6FD;
+body.sugar-bloom-page header.brand-project-header nav.nav .nav-links a:hover {
+    color: #D9E6FD !important;
+    -webkit-text-fill-color: #D9E6FD !important;
 }
+
 
