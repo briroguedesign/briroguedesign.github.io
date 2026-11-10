@@ -4877,3 +4877,33 @@ p {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==================================================
+   GLOBAL NAVIGATION COLORS â€” ALL PAGES
+   Desktop header links are white on BriRogue blue.
+   Mobile dropdown links are blue on off-white.
+================================================== */
+.nav .nav-links a,
+.nav .nav-links a:link,
+.nav .nav-links a:visited {
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+}
+
+.nav .nav-links a:hover {
+    color: var(--light-periwinkle);
+    -webkit-text-fill-color: var(--light-periwinkle);
+}
+
+@media (max-width: 700px) {
+    .nav .nav-links a,
+    .nav .nav-links a:link,
+    .nav .nav-links a:visited {
+        color: var(--blue);
+        -webkit-text-fill-color: var(--blue);
+    }
+    .nav .nav-links a:hover {
+        color: var(--dark-blue);
+        -webkit-text-fill-color: var(--dark-blue);
+    }
+}
