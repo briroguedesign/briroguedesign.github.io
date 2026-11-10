@@ -4709,746 +4709,171 @@ p {
         min-height: 250px;
     }
 }
-
 /* ==================================================
-   BRIROGUE MOBILE POLISH V3 â€” SEP 20 2026
-   Consistent overlaps + refined mobile compositions
+   BRAND PORTFOLIO PROJECT PAGES
+   Shared layout; override custom properties per brand.
+   Header and footer retain the site's BriRogue blue.
 ================================================== */
-
-/* CONTACT â€” restore outlined overlap treatment on both desktop + mobile */
-.contact-intro h1,
-.other-contact-info h2 {
-    color: var(--off-white);
-    -webkit-text-stroke: 9px var(--blue);
-    paint-order: stroke fill;
-}
-
-.other-contact-info h2 {
-    color: var(--blue);
-    -webkit-text-stroke-color: var(--off-white);
-}
-
-@media (max-width: 767px) {
-
-    /* ----------------------------------------------
-       ALL STACKED DISPLAY HEADLINES
-       Same overlap amount between every line.
-    ---------------------------------------------- */
-    .hero-title,
-    .why-title,
-    .cta-title,
-    .about-more-title,
-    .beyond-title,
-    .about-cta-title,
-    .services-title,
-    .services-work-title,
-    .brand-more-title,
-    .services-cta-title,
-    .work-title {
-        line-height: 1;
-    }
-
-    .hero-title span,
-    .why-title span,
-    .cta-title span,
-    .about-more-title span,
-    .beyond-title span,
-    .about-cta-title span,
-    .services-title span,
-    .services-work-title span,
-    .brand-more-title span,
-    .services-cta-title span,
-    .work-title span {
-        line-height: .78 !important;
-        transform: none !important;
-        margin-top: 0 !important;
-    }
-
-    .hero-title span + span,
-    .why-title span + span,
-    .cta-title span + span,
-    .about-more-title span + span,
-    .beyond-title span + span,
-    .about-cta-title span + span,
-    .services-title span + span,
-    .services-work-title span + span,
-    .brand-more-title span + span,
-    .services-cta-title span + span,
-    .work-title span + span {
-        margin-top: -.15em !important;
-    }
-
-    /* HOME â€” WHY: pull stamp inward and tuck it beside headline */
-    .why-copy h2 {
-        width: calc(100% - 112px);
-        margin-bottom: 34px;
-    }
-
-    .why-circle {
-        top: 18px;
-        right: 18px;
-        width: 92px;
-        height: 92px;
-    }
-
-    .why-circle img {
-        width: 92px;
-        height: 92px;
-    }
-
-    /* WORK â€” keep topo decoration away from paragraph */
-    .work-hero-content {
-        position: relative;
-        z-index: 2;
-        padding-bottom: 26px;
-    }
-
-    .work-hero::before {
-        top: 0;
-        right: 0;
-        width: 48%;
-        height: 72%;
-        bottom: auto;
-        background-position: right top;
-        background-size: auto 100%;
-        opacity: .32;
-        z-index: 0;
-    }
-
-    .work-hero-content p {
-        position: relative;
-        z-index: 3;
-        margin-top: 16px;
-        max-width: 88%;
-    }
-
-    /* ABOUT HERO â€” headline across top, copy left, portrait right */
-    .about-hero-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.15fr) minmax(150px, .85fr);
-        grid-template-rows: auto auto;
-        column-gap: 20px;
-        row-gap: 28px;
-        align-items: center;
-        min-height: 0;
-        padding-top: 64px;
-        padding-bottom: 62px;
-    }
-
-    .about-hero-copy {
-        display: contents;
-    }
-
-    .about-hero-copy h1 {
-        grid-column: 1 / -1;
-        grid-row: 1;
-        margin: 0;
-        font-size: clamp(3.8rem, 15vw, 5rem);
-    }
-
-    .about-hero-copy p {
-        grid-column: 1;
-        width: 100%;
-        margin: 0 0 18px;
-        font-size: clamp(.82rem, 2.7vw, 1rem);
-        line-height: 1.18;
-    }
-
-    .about-hero-copy p:first-of-type {
-        align-self: end;
-    }
-
-    .about-portrait-area {
-        grid-column: 2;
-        grid-row: 2 / span 2;
-        align-self: center;
-        min-height: 0;
-        width: 100%;
-        margin: 0;
-        padding: 0 10px 0 0;
-        justify-content: center;
-    }
-
-    .about-portrait-placeholder {
-        width: min(100%, 225px);
-        margin: 0 auto;
-    }
-
-    .about-portrait-placeholder img {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .about-arrow {
-        width: 58px;
-        right: 3%;
-        bottom: 15%;
-    }
-
-    .about-handwriting {
-        right: 4%;
-        bottom: -2%;
-        max-width: 92px;
-        font-size: .62rem;
-    }
-
-    /* ABOUT â€” BEYOND: editorial split instead of strip dropped below */
-    .beyond-design {
-        padding-top: 64px;
-        padding-bottom: 64px;
-    }
-
-    .beyond-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.08fr) minmax(155px, .92fr);
-        grid-template-rows: auto auto;
-        column-gap: 22px;
-        row-gap: 28px;
-        align-items: center;
-    }
-
-    .beyond-copy {
-        display: contents;
-    }
-
-    .beyond-copy h2 {
-        grid-column: 1 / -1;
-        grid-row: 1;
-        margin: 0;
-    }
-
-    .beyond-copy p,
-    .beyond-copy h3 {
-        grid-column: 1;
-        width: 100%;
-        max-width: none;
-    }
-
-    .beyond-copy p {
-        margin-top: 0;
-        margin-bottom: 18px;
-        font-size: clamp(.82rem, 2.7vw, 1rem);
-        line-height: 1.18;
-    }
-
-    .beyond-copy h3 {
-        margin-top: 4px;
-        font-size: clamp(1.2rem, 4vw, 1.55rem);
-    }
-
-    .beyond-photo-strip {
-        grid-column: 2;
-        grid-row: 2 / span 3;
-        align-self: center;
-        position: relative;
-        inset: auto;
-        width: 100%;
-        max-width: 230px;
-        height: auto;
-        margin: 0 auto;
-        transform: rotate(2deg);
-        overflow: visible;
-    }
-
-    .beyond-photo-strip img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        object-fit: contain;
-    }
-
-    /* CONTACT â€” outlined display type on phone too */
-    .contact-intro h1 {
-        color: var(--off-white);
-        -webkit-text-stroke: 4px var(--blue);
-        paint-order: stroke fill;
-        line-height: .68;
-    }
-
-    .other-contact-info h2 {
-        color: var(--blue);
-        -webkit-text-stroke: 4px var(--off-white);
-        paint-order: stroke fill;
-        line-height: .7;
-    }
-}
-
-/* Narrow phones: keep the side-by-side About compositions usable */
-@media (max-width: 430px) {
-    .why-copy h2 {
-        width: calc(100% - 92px);
-    }
-
-    .why-circle {
-        right: 8px;
-        width: 78px;
-        height: 78px;
-    }
-
-    .why-circle img {
-        width: 78px;
-        height: 78px;
-    }
-
-    .about-hero-grid {
-        grid-template-columns: minmax(0, 1.05fr) minmax(125px, .75fr);
-        column-gap: 14px;
-        padding-top: 58px;
-    }
-
-    .about-hero-copy p {
-        font-size: .78rem;
-    }
-
-    .about-arrow {
-        width: 48px;
-    }
-
-    .about-handwriting {
-        max-width: 76px;
-        font-size: .55rem;
-    }
-
-    .beyond-grid {
-        grid-template-columns: minmax(0, 1.05fr) minmax(125px, .75fr);
-        column-gap: 14px;
-    }
-
-    .beyond-copy p {
-        font-size: .78rem;
-    }
-}
-
-
-/* ==================================================
-   PHOTOGRAPHY — CAMERA + REAL IMAGE GALLERY
-================================================== */
-
-/* Sony camera replaces the hero placeholder */
-.photography-page .photo-hero-image-placeholder {
-    background: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: visible;
-    min-width: 0;
-}
-
-.photography-page .photo-camera-image {
-    display: block;
-    width: 100%;
-    max-width: 480px;
-    height: auto;
-    object-fit: contain;
-    transform: rotate(-12deg);
-    filter: drop-shadow(12px 22px 18px rgba(0, 0, 0, 0.2));
-}
-
-/* Masonry gallery — preserve original photo ratios */
-.photography-page .photo-gallery {
-    column-count: 3;
-    column-gap: 14px;
-}
-
-.photography-page .photo-gallery-item {
-    display: block;
-    break-inside: avoid;
-    margin-bottom: 14px;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.photography-page .photo-gallery-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    transition: transform 0.4s ease;
-}
-
-@media (hover: hover) {
-    .photography-page .photo-gallery-item:hover img {
-        transform: scale(1.035);
-    }
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-    .photography-page .photo-gallery {
-        column-count: 2;
-    }
-
-    .photography-page .photo-camera-image {
-        max-width: 340px;
-    }
-}
-
-/* Phone */
-@media (max-width: 767px) {
-    .photography-page .photo-hero-content {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .photography-page .photo-hero-copy {
-        width: 100%;
-        min-width: 0;
-    }
-
-    .photography-page .photo-hero-copy h1 {
-        font-size: clamp(2.5rem, 10.5vw, 4.5rem);
-        max-width: 100%;
-        overflow-wrap: normal;
-    }
-
-    .photography-page .photo-hero-image-placeholder {
-        width: 100%;
-        height: auto;
-        min-height: 0;
-        padding: 15px 25px 35px;
-    }
-
-    .photography-page .photo-camera-image {
-        width: min(75%, 300px);
-        max-width: 100%;
-        transform: rotate(-12deg);
-    }
-
-    .photography-page .photo-gallery {
-        column-count: 1;
-        column-gap: 0;
-    }
-
-    .photography-page .photo-gallery-item {
-        margin-bottom: 12px;
-        border-radius: 10px;
-    }
-}
-
-/* ==========================================
-   PHOTOGRAPHY LIGHTBOX
-========================================== */
-
-.photography-page .photo-gallery-item {
-    cursor: zoom-in;
-}
-
-.photo-lightbox {
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background: rgba(7, 8, 15, 0.96);
-    padding: 65px 70px;
-}
-
-.photo-lightbox.is-open {
-    display: flex;
-}
-
-.photo-lightbox .lightbox-image {
-    display: block;
-    max-width: 100%;
-    max-height: calc(100dvh - 130px);
-    width: auto;
-    height: auto;
-    object-fit: contain;
-}
-
-.photo-lightbox button {
-    position: absolute;
-    background: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-}
-
-.lightbox-close {
-    top: 15px;
-    right: 25px;
-    font-size: 42px;
-}
-
-.lightbox-prev,
-.lightbox-next {
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 55px;
-    padding: 12px;
-}
-
-.lightbox-prev {
-    left: 12px;
-}
-
-.lightbox-next {
-    right: 12px;
-}
-
-.lightbox-counter {
-    position: absolute;
-    bottom: 22px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 13px;
-    letter-spacing: 0.12em;
-}
-
-@media (max-width: 767px) {
-    .photo-lightbox {
-        padding: 65px 12px;
-    }
-
-    .photo-lightbox .lightbox-image {
-        max-height: calc(100dvh - 130px);
-    }
-
-    .lightbox-prev,
-    .lightbox-next {
-        font-size: 40px;
-        background: rgba(0, 0, 0, 0.35);
-    }
-
-    .lightbox-prev {
-        left: 2px;
-    }
-
-    .lightbox-next {
-        right: 2px;
-    }
-}
-
-/* ==========================================
-   BRAND PROJECT TEMPLATE
-========================================== */
 
 .brand-project-page {
-  --project-cream: #fff6e6;
-  --project-accent: #90c3c8;
-  background: var(--project-cream);
+    --project-cream: #fff6e6;
+    --project-accent: #90c3c8;
+    --project-about-text: #fff6e6;
+    --project-variations-bg: var(--project-cream);
+    background: var(--project-cream);
 }
 
-/* Header */
 .brand-project-page .brand-project-header {
-  background: #0019ff;
+    background: #0019ff;
 }
 
-/* Hero logo */
 .brand-project-page .brand-project-hero {
-  background: var(--project-cream);
-  min-height: 440px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 70px 8%;
+    background: var(--project-cream);
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 8%;
 }
 
 .brand-project-page .brand-project-hero img {
-  display: block;
-  width: min(100%, 800px);
-  max-height: 420px;
-  height: auto;
-  object-fit: contain;
+    display: block;
+    width: min(100%, 800px);
+    max-height: 420px;
+    height: auto;
+    object-fit: contain;
 }
 
-/* Color palette and typography */
 .brand-project-page .brand-project-identity {
-  background: var(--project-accent);
-  min-height: 210px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 6%;
+    background: var(--project-accent);
+    min-height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 6%;
 }
 
-/* Logo variations */
 .brand-project-page .brand-project-variations {
-  background: var(--project-cream);
-  min-height: 310px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 6%;
+    background: var(--project-variations-bg);
+    min-height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 6%;
 }
 
 .brand-project-page .brand-project-identity img,
 .brand-project-page .brand-project-variations img {
-  display: block;
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  object-fit: contain;
-}
-
-.brand-project-page .brand-project-coming-soon {
-  font-family: "Aileron", sans-serif;
-  font-size: clamp(1.3rem, 3vw, 2.4rem);
-  font-weight: 900;
-  text-align: center;
-  opacity: 0.65;
-}
-
-.brand-project-page .brand-project-identity
-.brand-project-coming-soon {
-  color: var(--project-cream);
-}
-
-.brand-project-page .brand-project-variations
-.brand-project-coming-soon {
-  color: var(--project-accent);
-}
-
-/* About the brand */
-.brand-project-page .brand-project-about {
-  background: var(--project-accent);
-  color: var(--project-cream);
-  padding: 55px 6%;
-}
-
-.brand-project-page .brand-project-about-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 32% 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.brand-project-page .brand-project-about h2 {
-  font-family: "Aileron", sans-serif;
-  font-size: clamp(2.2rem, 4vw, 4rem);
-  font-weight: 900;
-  line-height: 0.95;
-  margin: 0;
-}
-
-.brand-project-page .brand-project-about p {
-  border-left: 1px solid currentColor;
-  padding-left: 40px;
-  margin: 0;
-  font-size: clamp(1rem, 1.4vw, 1.25rem);
-  line-height: 1.55;
-}
-
-/* Edge-to-edge gallery */
-.brand-project-page .brand-project-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0;
-}
-
-.brand-project-page .brand-project-gallery-item {
-  min-width: 0;
-  overflow: hidden;
-  background: var(--project-cream);
-}
-
-.brand-project-page .brand-project-gallery-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Tablet */
-@media (max-width: 900px) {
-  .brand-project-page .brand-project-hero {
-    min-height: 320px;
-    padding: 50px 6%;
-  }
-
-  .brand-project-page .brand-project-about-inner {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .brand-project-page .brand-project-about p {
-    border-left: none;
-    padding-left: 0;
-  }
-}
-
-/* Phone */
-@media (max-width: 600px) {
-  .brand-project-page .brand-project-hero {
-    min-height: 240px;
-    padding: 45px 7%;
-  }
-
-  .brand-project-page .brand-project-identity {
-    min-height: 160px;
-    padding: 25px 6%;
-  }
-
-  .brand-project-page .brand-project-variations {
-    min-height: 200px;
-    padding: 30px 6%;
-  }
-
-  .brand-project-page .brand-project-about {
-    padding: 45px 7%;
-  }
-
-  .brand-project-page .brand-project-gallery {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-/* ==========================================
-   SUGAR BLOOM — NATURAL IMAGE GALLERY
-========================================== */
-
-.sugar-bloom-page .brand-project-gallery {
-    display: block;
-    columns: 2;
-    column-gap: 0;
-}
-
-.sugar-bloom-page .brand-project-gallery-item {
     display: block;
     width: 100%;
+    max-width: 1200px;
     height: auto;
-    aspect-ratio: auto;
-    break-inside: avoid;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.sugar-bloom-page .brand-project-gallery-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
     object-fit: contain;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-    .sugar-bloom-page .brand-project-gallery {
-        columns: 1;
+.brand-project-page .brand-project-coming-soon {
+    font-family: "Aileron", sans-serif;
+    font-size: clamp(1.3rem, 3vw, 2.4rem);
+    font-weight: 900;
+    text-align: center;
+    opacity: .65;
+}
+
+.brand-project-page .brand-project-identity .brand-project-coming-soon {
+    color: var(--project-cream);
+}
+
+.brand-project-page .brand-project-variations .brand-project-coming-soon {
+    color: var(--project-accent);
+}
+
+.brand-project-page .brand-project-about {
+    background: var(--project-accent);
+    color: var(--project-about-text);
+    padding: 55px 6%;
+}
+
+.brand-project-page .brand-project-about-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 32% minmax(0, 1fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.brand-project-page .brand-project-about h2 {
+    font-family: "Aileron", sans-serif;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 900;
+    line-height: .95;
+    margin: 0;
+}
+
+.brand-project-page .brand-project-about p {
+    border-left: 1px solid currentColor;
+    padding-left: 40px;
+    margin: 0;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    line-height: 1.55;
+}
+
+.brand-project-page .brand-project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+}
+
+.brand-project-page .brand-project-gallery-item {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--project-cream);
+}
+
+.brand-project-page .brand-project-gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+    .brand-project-page .brand-project-hero {
+        min-height: 320px;
+        padding: 50px 6%;
+    }
+
+    .brand-project-page .brand-project-about-inner {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .brand-project-page .brand-project-about p {
+        border-left: 0;
+        padding-left: 0;
     }
 }
 
+@media (max-width: 600px) {
+    .brand-project-page .brand-project-hero {
+        min-height: 240px;
+        padding: 45px 7%;
+    }
 
-/* SUGAR BLOOM — FORCE WHITE NAV LINKS */
+    .brand-project-page .brand-project-identity {
+        min-height: 160px;
+        padding: 25px 6%;
+    }
 
-body.sugar-bloom-page header.brand-project-header nav.nav .nav-links a,
-body.sugar-bloom-page header.brand-project-header nav.nav .nav-links a:link,
-body.sugar-bloom-page header.brand-project-header nav.nav .nav-links a:visited {
-    color: #FFFFFF !important;
-    -webkit-text-fill-color: #FFFFFF !important;
+    .brand-project-page .brand-project-variations {
+        min-height: 200px;
+        padding: 30px 6%;
+    }
+
+    .brand-project-page .brand-project-about {
+        padding: 45px 7%;
+    }
+
+    .brand-project-page .brand-project-gallery {
+        grid-template-columns: 1fr;
+    }
 }
-
-body.sugar-bloom-page header.brand-project-header nav.nav .nav-links a:hover {
-    color: #D9E6FD !important;
-    -webkit-text-fill-color: #D9E6FD !important;
-}
-
-
