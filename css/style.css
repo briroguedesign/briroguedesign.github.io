@@ -4907,3 +4907,101 @@ p {
         -webkit-text-fill-color: var(--dark-blue);
     }
 }
+
+/* ==================================================
+   MSURC — PROJECT SPECIFIC STYLING
+================================================== */
+
+.msu-racing-page {
+    --project-cream: #ffffff;
+    --project-accent: #18453b;
+    --project-about-text: #ffffff;
+    --project-variations-bg: #ffffff;
+}
+
+
+/* HERO */
+
+.msu-racing-page .brand-project-hero {
+    min-height: 350px;
+    padding: 65px 8%;
+}
+
+.msu-racing-page .brand-project-hero img {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    max-height: 280px;
+    height: auto;
+    object-fit: contain;
+}
+
+.msu-racing-page .brand-project-hero
+.brand-project-coming-soon {
+    color: var(--project-accent);
+}
+
+
+/* GALLERY */
+
+.msu-racing-page .brand-project-gallery {
+    display: block;
+    columns: 2;
+    column-gap: 0;
+}
+
+.msu-racing-page .brand-project-gallery-item {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    break-inside: avoid;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.msu-racing-page .brand-project-gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* TEMPORARY GALLERY PLACEHOLDERS */
+
+.msu-racing-page .brand-project-gallery-placeholder {
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5ebe8;
+    color: var(--project-accent);
+    border: 1px solid #ffffff;
+    font-size: 1rem;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .msu-racing-page .brand-project-hero {
+        min-height: 250px;
+        padding: 45px 8%;
+    }
+
+    .msu-racing-page .brand-project-hero img {
+        max-width: 280px;
+        max-height: 190px;
+    }
+
+    .msu-racing-page .brand-project-gallery {
+        columns: 1;
+    }
+
+    .msu-racing-page .brand-project-gallery-placeholder {
+        min-height: 240px;
+    }
+}
