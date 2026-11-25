@@ -5178,13 +5178,13 @@ p {
 .hero-drawn-elements {
     position: absolute;
 
-    right: 5%;
+    right: 12%;
     top: 50%;
 
     transform: translateY(-50%);
 
-    width: 24%;
-    max-width: 300px;
+    width: 32%;
+    max-width: 400px;
 
     pointer-events: none;
 }
