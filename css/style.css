@@ -5167,3 +5167,89 @@ p {
     object-fit: cover;
     object-position: center;
 }
+/* ==================================================
+   HOME — ANIMATED DRAWN ELEMENTS
+================================================== */
+
+.hero-content {
+    position: relative;
+}
+
+.hero-drawn-elements {
+    position: absolute;
+
+    right: 5%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 24%;
+    max-width: 300px;
+
+    pointer-events: none;
+}
+
+.hero-drawn-elements img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    animation: drawnReveal 2.5s ease-in-out .4s both;
+}
+
+
+/* TOP TO BOTTOM DRAWING REVEAL */
+
+@keyframes drawnReveal {
+    from {
+        clip-path: inset(0 0 100% 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+
+    .hero-drawn-elements {
+        width: 21%;
+        right: 3%;
+        max-width: 220px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+
+    .hero-drawn-elements {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        transform: none;
+
+        width: 42%;
+        max-width: 180px;
+
+        align-self: flex-end;
+        margin-top: 25px;
+    }
+}
+
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-drawn-elements img {
+        animation: none;
+    }
+}
