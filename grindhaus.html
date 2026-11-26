@@ -1,1 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grindhaus | BriRogue Design</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="brand-project-page grindhaus-page">
+
+    <!-- ==========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header class="brand-project-header">
+
+        <nav class="nav container">
+
+            <div class="nav-sparkle">
+                <img src="images/star-white.svg" alt="">
+            </div>
+
+            <a class="logo" href="index.html">
+                <img src="images/logo-white.svg" alt="BriRogue Design">
+            </a>
+
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links">
+                <a href="work.html">work</a>
+                <a href="about.html">about</a>
+                <a href="services.html">services</a>
+                <a href="contact.html">contact</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ==========================================
+             PROJECT HERO — MAIN LOGO
+        ========================================== -->
+
+        <section class="brand-project-hero">
+
+            <img
+                src="images/grindhaus/logo.svg"
+                alt="Grindhaus primary logo"
+            >
+
+        </section>
+
+
+        <!-- ==========================================
+             COLOR PALETTE & TYPOGRAPHY
+        ========================================== -->
+
+        <section class="brand-project-identity">
+
+            <img
+                src="images/grindhaus/identity.svg"
+                alt="Grindhaus color palette and typography"
+            >
+
+        </section>
+
+
+        <!-- ==========================================
+             LOGO VARIATIONS
+        ========================================== -->
+
+        <section class="brand-project-variations">
+
+            <img
+                src="images/grindhaus/variations.svg"
+                alt="Grindhaus logo variations"
+            >
+
+        </section>
+
+
+        <!-- ==========================================
+             ABOUT THE BRAND
+        ========================================== -->
+
+        <section class="brand-project-about">
+
+            <div class="brand-project-about-inner">
+
+                <h2>about the<br>brand.</h2>
+
+                <p>
+                    Grindhaus is a branding concept built around
+                    a bold, unapologetic visual identity. Combining
+                    expressive typography, striking contrast, and
+                    distinctive graphic elements, the brand takes
+                    a confident and contemporary approach to visual
+                    storytelling. The identity creates a cohesive
+                    and recognizable presence across physical and
+                    digital applications while maintaining its
+                    distinctive personality.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROJECT GALLERY
+        ========================================== -->
+
+        <section class="brand-project-gallery">
+
+            <!-- IMAGE 01 -->
+
+            <div class="brand-project-gallery-item">
+                <img
+                    src="images/grindhaus/01.jpg"
+                    alt="Grindhaus branding mockup 01"
+                    loading="lazy"
+                >
+            </div>
+
+
+            <!-- IMAGE 02 -->
+
+            <div class="brand-project-gallery-item">
+                <img
+                    src="images/grindhaus/02.jpg"
+                    alt="Grindhaus branding mockup 02"
+                    loading="lazy"
+                >
+            </div>
+
+
+            <!-- IMAGE 03 -->
+
+            <div class="brand-project-gallery-item">
+                <img
+                    src="images/grindhaus/03.jpg"
+                    alt="Grindhaus branding mockup 03"
+                    loading="lazy"
+                >
+            </div>
+
+
+            <!-- IMAGE 04 -->
+
+            <div class="brand-project-gallery-item">
+                <img
+                    src="images/grindhaus/04.jpg"
+                    alt="Grindhaus branding mockup 04"
+                    loading="lazy"
+                >
+            </div>
+
+
+            <!-- IMAGE 05 -->
+
+            <div class="brand-project-gallery-item">
+                <img
+                    src="images/grindhaus/05.jpg"
+                    alt="Grindhaus branding mockup 05"
+                    loading="lazy"
+                >
+            </div>
+
+
+            <!-- IMAGE 06 — SVG -->
+
+            <div class="brand-project-gallery-item">
+                <img
+                    src="images/grindhaus/06.svg"
+                    alt="Grindhaus graphic design artwork"
+                    loading="lazy"
+                >
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container site-footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    <img
+                        src="images/logo-white.svg"
+                        alt="BriRogue Design"
+                    >
+                </a>
+
+                <p class="footer-tagline">
+                    go rogue with your brand.
+                </p>
+
+                <p class="footer-copyright">
+                    © 2026 brirogue design
+                </p>
+
+            </div>
+
+
+            <div class="footer-socials">
+
+                <a href="#" target="_blank" rel="noopener">
+                    instagram
+                </a>
+
+                <a href="#" target="_blank" rel="noopener">
+                    linkedin
+                </a>
+
+                <a href="#" target="_blank" rel="noopener">
+                    behance
+                </a>
+
+                <a href="#" target="_blank" rel="noopener">
+                    pinterest
+                </a>
+
+            </div>
+
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+
+                <a href="work.html">work</a>
+                <a href="about.html">about</a>
+                <a href="services.html">services</a>
+                <a href="contact.html">contact</a>
+
+            </nav>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==========================================
+         MOBILE NAVIGATION
+    ========================================== -->
+
+    <script>
+
+        const navToggle = document.querySelector(".nav-toggle");
+        const nav = document.querySelector(".nav");
+
+        if (navToggle && nav) {
+
+            navToggle.addEventListener("click", () => {
+
+                const isOpen = nav.classList.toggle("nav-open");
+
+                navToggle.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
+
+            });
+
+            document.querySelectorAll(".nav-links a").forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    nav.classList.remove("nav-open");
+
+                    navToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                });
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
