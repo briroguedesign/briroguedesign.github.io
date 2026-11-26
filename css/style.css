@@ -239,7 +239,7 @@ p {
     -webkit-text-stroke: 9px var(--blue);
     paint-order: stroke fill;
 
-    line-height: 0.72;
+    line-height: 0.80;
 }
 
 .hero-title span:nth-child(1) {
@@ -248,12 +248,12 @@ p {
 
 .hero-title span:nth-child(2) {
     z-index: 2;
-    transform: translateY(-12px);
+    transform: translateY(-5px);
 }
 
 .hero-title span:nth-child(3) {
     z-index: 3;
-    transform: translateY(-50px);
+    transform: translateY(-15px);
 }
 
 
@@ -5181,8 +5181,8 @@ p {
     right: 12%;
     top: 50%;
 
-    transform: translateY(-50%);
-
+    transform: translateY(-50%) rotate(15deg);
+   
     width: 32%;
     max-width: 400px;
 
