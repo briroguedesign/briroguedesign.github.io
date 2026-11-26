@@ -5782,3 +5782,13 @@ body.grindhaus-page .brand-project-header .nav-links a:hover {
     }
 
 }
+
+/* ABOUT PAGE — PARAGRAPH SPACING */
+
+.about-page .about-experience p {
+    margin: 0 0 20px;
+}
+
+.about-page .about-experience p:last-child {
+    margin-bottom: 0;
+}
