@@ -5253,3 +5253,216 @@ p {
         animation: none;
     }
 }
+/* ==================================================
+   SUGAR BLOOM — PROJECT SPECIFIC STYLING
+================================================== */
+
+.sugar-bloom-page {
+    --project-cream: #fffbf3;
+    --project-accent: #90c3c8;
+    --project-about-text: #fffbf3;
+    --project-variations-bg: #fffbf3;
+}
+
+
+/* ==================================================
+   HERO — PATTERN & LOGO
+================================================== */
+
+.sugar-bloom-page .brand-project-hero {
+    background-color: #fffbf3;
+    background-image: url("../images/sugar-bloom/pattern.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    aspect-ratio: 4 / 1;
+    min-height: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sugar-bloom-page .brand-project-hero img {
+    display: block;
+    width: 25%;
+    max-width: 350px;
+    max-height: 70%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ==================================================
+   COLOR PALETTE & TYPOGRAPHY
+================================================== */
+
+.sugar-bloom-page .brand-project-identity {
+    background: #90c3c8;
+    width: 100%;
+    aspect-ratio: 5 / 1;
+    min-height: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ==================================================
+   LOGO VARIATIONS
+================================================== */
+
+.sugar-bloom-page .brand-project-variations {
+    background: #fffbf3;
+    width: 100%;
+    aspect-ratio: 16 / 5;
+    min-height: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* IDENTITY & VARIATION SVG SIZING */
+
+.sugar-bloom-page .brand-project-identity img,
+.sugar-bloom-page .brand-project-variations img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ==================================================
+   ABOUT THE BRAND
+================================================== */
+
+.sugar-bloom-page .brand-project-about {
+    background: #90c3c8;
+    color: #fffbf3;
+}
+
+
+/* ==================================================
+   PROJECT GALLERY
+================================================== */
+
+.sugar-bloom-page .brand-project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    columns: auto;
+    column-gap: 0;
+    row-gap: 0;
+    gap: 0;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* GALLERY IMAGE CONTAINERS */
+
+.sugar-bloom-page .brand-project-gallery-item {
+    position: relative;
+    display: block;
+
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    overflow: hidden;
+
+    background: #fffbf3;
+}
+
+
+/* GALLERY IMAGES & FUTURE VIDEOS */
+
+.sugar-bloom-page .brand-project-gallery-item img,
+.sugar-bloom-page .brand-project-gallery-item video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+
+/* TEMPORARY GALLERY PLACEHOLDERS */
+
+.sugar-bloom-page .brand-project-gallery-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+
+    background: #fffbf3;
+    color: #90c3c8;
+
+    font-family: "Aileron", sans-serif;
+    font-weight: 900;
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+
+/* ==================================================
+   MOBILE RESPONSIVENESS
+================================================== */
+
+@media (max-width: 600px) {
+
+    .sugar-bloom-page .brand-project-hero {
+        aspect-ratio: auto;
+        min-height: 220px;
+        padding: 0;
+    }
+
+    .sugar-bloom-page .brand-project-hero img {
+        width: 40%;
+        max-width: 200px;
+    }
+
+    .sugar-bloom-page .brand-project-identity {
+        min-height: 0;
+        padding: 0;
+    }
+
+    .sugar-bloom-page .brand-project-variations {
+        min-height: 0;
+        padding: 0;
+    }
+
+    .sugar-bloom-page .brand-project-gallery {
+        grid-template-columns: 1fr;
+        columns: auto;
+        gap: 0;
+    }
+
+    .sugar-bloom-page .brand-project-gallery-item {
+        aspect-ratio: 3 / 2;
+        min-height: 0;
+    }
+}
